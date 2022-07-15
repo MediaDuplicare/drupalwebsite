@@ -1,0 +1,18 @@
+name: duplicare
+type: theme
+core_version_requirement: ^8 || ^9
+description: Custom Theme for Duplicare
+package: Duplicare
+libraries:
+  - gsv/global-styling
+base theme: false
+regions:
+  header_menu: Header Menu
+  pre_content: Before Content
+  content: Content
+  footer_first: Footer Primary First
+  footer_second: Footer Primary Second
+  footer_third: Footer Primary Third
+  hidden: Hidden
+stylesheets-remove:
+  - core/assets/vendor/normalize-css/normalize.css
