@@ -1,12 +1,12 @@
-<?php 
+<?php
 use Symfony\Component\Yaml\Parser;
 
 /**
  * Implements hook_preprocess_HOOK() for html.html.twig.
  */
-function drupal_devel_preprocess_html(array &$variables) 
+function drupal_devel_preprocess_html(array &$variables)
 {
-    //load yaml files in 
+    //load yaml files in
     $configs = _loadYamlConfigs();
     $variables['configs']= $configs;
 }
@@ -14,7 +14,7 @@ function drupal_devel_preprocess_html(array &$variables)
 
 function drupal_devel_preprocess(array &$variables) {
 
-    //load yaml files in 
+    //load yaml files in
     $configs = _loadYamlConfigs();
     $variables = array_merge($configs, $variables);
 }
@@ -40,7 +40,7 @@ function drupal_devel_theme($existing, $type, $theme, $path) {
 
     global $theme;
     global $base_path;
-    $path = drupal_get_path('theme', 'ama');
+    $path = drupal_get_path('theme', 'duplicare');
     $files = glob($path . "/templates/components/config/*.yaml");
     $parser = new Parser();
 
