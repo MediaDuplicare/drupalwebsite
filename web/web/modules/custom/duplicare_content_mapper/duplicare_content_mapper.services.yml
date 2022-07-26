@@ -1,0 +1,4 @@
+services:
+  duplicare.content.mapper:
+    class: Drupal\duplicare_content_mapper\Services\DuplicareMapper
+    arguments: []

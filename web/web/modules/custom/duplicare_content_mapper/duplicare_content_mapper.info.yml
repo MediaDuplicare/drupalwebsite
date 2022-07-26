@@ -1,0 +1,5 @@
+name: Duplicare content mapper
+description: Module to map nodes to components
+package: Duplicare
+type: module
+core_version_requirement: ^8 || ^9

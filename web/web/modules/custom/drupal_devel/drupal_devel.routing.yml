@@ -1,0 +1,7 @@
+template.test:
+  path: '/template'
+  defaults:
+    _controller: '\Drupal\drupal_devel\Controller\TemplateController::Test'
+    _title: 'Test Template'
+  requirements:
+    _permission: 'access content'

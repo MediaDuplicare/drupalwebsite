@@ -1,0 +1,5 @@
+name: Drupal Devel
+description: Module to enable development functionality
+package: Development
+type: module
+core_version_requirement: ^8 || ^9

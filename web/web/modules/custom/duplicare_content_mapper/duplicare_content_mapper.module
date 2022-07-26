@@ -1,0 +1,157 @@
+<?php
+use Drupal\Core\Breadcrumb\Breadcrumb;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Link;
+use Drupal\node\NodeInterface;
+use Drupal\node\Entity\Node;
+
+function duplicare_content_mapper_preprocess_node(array &$variables)
+{
+
+    $node = $variables['node'];
+    $node_type = $node->getType();
+    $view_mode = $variables['view_mode'];
+
+    $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+
+    $mapper = \Drupal::service('duplicare.content.mapper');
+    switch ($node_type)
+    {
+        case "splashpage":
+          $variables['page'] = $mapper->mapPage($node, $view_mode);
+        break;
+        case "landing_page":
+            $variables['landing_page'] = $mapper->mapLandingPage($node, $view_mode);
+            break;
+        case "page":
+            $variables['page'] = $mapper->mapPage($node, $view_mode);
+            break;
+        case "article":
+            $variables['article'] = $mapper->mapArticle($node, $view_mode);
+            break;
+        case "education":
+            $variables['education'] = $mapper->mapEducation($node, $view_mode);
+            break;
+        case "vacancy":
+            $variables['vacancy'] = $mapper->mapVacancy($node, $view_mode);
+            break;
+        case "training":
+            $variables['training'] = $mapper->mapTraining($node, $view_mode);
+            break;
+        case "history":
+            $variables['historypage'] = $mapper->mapHistory($node, $view_mode);
+            break;
+        case "research_group":
+            $variables['researchGroup'] = $mapper->mapResearchGroup($node, $view_mode);
+            break;
+        case "subpage":
+            $variables['subpage'] = $mapper->mapSubpage($node, $view_mode);
+            break;
+        case "module":
+            $variables['module'] = $mapper->mapModule($node, $view_mode);
+            break;
+        case "project":
+            $variables['project'] = $mapper->mapProject($node, $view_mode);
+            break;
+        case "person":
+            $variables['person'] = $mapper->mapPerson($node, $view_mode);
+            break;
+    }
+}
+
+/**
+ * Implements hook_system_breadcrumb_alter().
+ *
+ * Append node title to breadcrumb for certain content types and views that are
+ * not in the menu.
+ *
+ * @param \Drupal\Core\Breadcrumb\Breadcrumb $breadcrumb
+ * @param \Drupal\Core\Routing\RouteMatchInterface $route_match
+ * @param array $context
+ */
+function duplicare_content_mapper_system_breadcrumb_alter(Breadcrumb &$breadcrumb, RouteMatchInterface $route_match, array $context) {
+  if ($route_match->getRawParameter('node')){
+    $node = Node::load($route_match->getRawParameter('node'));
+    $node = (new Drupal\duplicare_content_mapper\Services\DuplicareMapper)->_getEntityTranslation($node);
+    if ($node->getType() == "article" || $node->getType() == "vacancy"){
+      $breadcrumb = new Breadcrumb();
+      $breadcrumb->addLink(Link::createFromRoute($node->getTitle(), '<none>'));
+    }
+  }
+}
+
+/**
+* Implements hook_ENTITY_TYPE_insert().
+*
+*/
+
+
+function duplicare_content_mapper_node_insert(NodeInterface $node)
+{
+    if($node->getType() === 'subpage')
+    {
+            _createPathAlias($node);
+            return;
+    }
+}
+
+function duplicare_content_mapper_node_presave(NodeInterface $node){
+
+        if($node->getType() === 'subpage')
+        {
+            if(!$node->isNew()){
+                _createPathAlias($node);
+                return;
+            }
+        }
+}
+
+function _getEntityTranslation($entity){
+    $langcode = \Drupal::service('language_manager')->getCurrentLanguage()->getId();
+    if ($entity->hasTranslation($langcode)){
+      return $entity->getTranslation($langcode);
+    }
+    return $entity;
+}
+
+function _createPathAlias($node, $insert = false)
+{
+    $node = _getEntityTranslation($node);
+    $base_path_alias = "";
+    //education reference
+    if ($node->hasField('field_education')
+    && !$node->get('field_education')->isEmpty()) {
+        $education = _getEntityTranslation(Node::load($node->field_education->getValue()[0]['target_id']));
+        $base_path_alias = \Drupal::service('path_alias.manager')->getAliasByPath('/node/'. $education->id()) . '/';
+    }
+    //training reference
+    if ($node->hasField('field_training')
+    && !$node->get('field_training')->isEmpty()) {
+        $training =_getEntityTranslation( Node::load($node->field_training->getValue()[0]['target_id']));
+        $base_path_alias = \Drupal::service('path_alias.manager')->getAliasByPath('/node/'. $training->id()) . '/';
+    }
+
+     //researhGroup reference
+     if ($node->hasField('field_research_group')
+     && !$node->get('field_research_group')->isEmpty()) {
+         $researchGroup =_getEntityTranslation( Node::load($node->field_research_group->getValue()[0]['target_id']));
+         $base_path_alias = \Drupal::service('path_alias.manager')->getAliasByPath('/node/'. $researchGroup->id()) . '/';
+     }
+
+    //no reference
+
+    $alias = $base_path_alias .  \Drupal::service('pathauto.alias_cleaner')->cleanString($node->field_main_title->getValue()[0]['value']);
+
+    //if alias exists => do nothing
+    $path_alias_repository = \Drupal::service('path_alias.repository');
+    if ($path_alias_repository->lookupByAlias($alias, \Drupal::service('language_manager')->getCurrentLanguage()->getId())) {
+       return;
+    }
+
+    $path_alias = \Drupal\path_alias\Entity\PathAlias::create([
+        'path' => '/node/' . $node->id(),
+        'alias' => $alias,
+        'langcode' =>  \Drupal::service('language_manager')->getCurrentLanguage()->getId()
+    ]);
+    $path_alias->save();
+}
