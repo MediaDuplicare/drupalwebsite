@@ -1,0 +1,11 @@
+<div class="menu-sidebar-wrapper">
+    <h6 class="sidebar-title">{{ data.title ? data.title : 'Alle Modules' }}</h6>
+    <ul class="menu menu-sidebar menu-sidebar--module">
+        {% for key, item in section %}
+            <li class="menu-item {% if key == 0 %}is-active{% endif %}">
+                <a class="tab-link--modules" data-tab="{{ item.link.text }}"
+                   href="{{ item.link.url }}">{{ item.link.text }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

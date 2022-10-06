@@ -1,0 +1,24 @@
+{% if  card.link.url %}
+	<a href="{{ tip.link.url }}" class="no-underline hover:bg-secondary-100">
+	{% endif %}
+	<article class="border-1 border-solid border-secondary-300 rounded-lg p-8">
+		<div class="flex items-center mb-2">
+			{% if card.icon %}
+				<svg width="29" height="29" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-4">
+					<path d="M14.5 9.66675C16.502 9.66675 18.125 8.04378 18.125 6.04175C18.125 4.03972 16.502 2.41675 14.5 2.41675C12.498 2.41675 10.875 4.03972 10.875 6.04175C10.875 8.04378 12.498 9.66675 14.5 9.66675Z" stroke="#1D71B8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M14.5 26.5834V9.66675" stroke="#1D71B8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M6.04199 14.5H2.41699C2.41699 17.7047 3.69005 20.7781 5.95612 23.0442C8.22218 25.3103 11.2956 26.5833 14.5003 26.5833C17.705 26.5833 20.7785 25.3103 23.0445 23.0442C25.3106 20.7781 26.5837 17.7047 26.5837 14.5H22.9587" stroke="#1D71B8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			{% endif %}
+			<h6 class="h6 text-tertiary">{{ card.title }}</h6>
+		</div>
+
+		{% if card.description %}
+			<p class="font-sofia text-sm text-tertiary-700">
+				{{ card.description }}
+			</p>
+		{% endif %}
+	</article>
+	{% if  card.link.url %}
+	</a>
+{% endif %}

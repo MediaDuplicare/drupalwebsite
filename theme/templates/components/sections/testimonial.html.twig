@@ -1,0 +1,79 @@
+<section class="testimonial bg-{% if section.color %}{{ section.color }}{% else %}primary{% endif %} text-white">
+	<div class="container-fluid wrap">
+		<div class="row flex items-end">
+			<div class="col-sm-12 col-md-7 col-lg-6">
+				<h2 class="title font-sofia text-4xl break-words font-semibold sm:text-10xl sm:font-extrabold">{{ section.title }}</h2>
+			</div>
+			<div class="col-sm-12 col-md-5 col-lg-6">
+		
+				<div class="description richtext text-lg text-primary-100">
+					{{ section.description | raw }}
+				</div>
+
+				{% if section.author.name %}
+					<div class="author flex items-center">
+						{% if section.author.picture.src %}
+							<img src="{{ section.author.picture.src }}" alt="{{ section.author.picture.alt }}" class="w-10 h-10 object-cover rounded-full mr-4"/>
+						{% endif %}
+
+						<div class="flex items-center">
+							<p class="font-sofia text-sm">
+								<span class="font-bold">{{ section.author.name }}
+									~
+								</span>
+								{% if section.author.function %}
+									{{ section.author.function }}
+								{% endif %}
+							</p>
+						</div>
+					</div>
+				{% endif %}
+			
+			</div>
+		</div>
+		{# <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 sm:mb-15">
+			<div>
+				<h2 class="font-sofia text-4xl break-words font-semibold sm:text-10xl sm:font-extrabold">{{ section.title }}</h2>
+			</div>
+			<div class="flex flex-col justify-end">
+				<div class="richtext text-lg text-primary-100">
+					{{ section.description | raw }}
+				</div>
+
+				{% if section.author.name %}
+					<div class="flex items-center">
+						{% if section.author.picture.src %}
+							<img src="{{ section.author.picture.src }}" alt="{{ section.author.picture.alt }}" class="w-10 h-10 object-cover rounded-full mr-4"/>
+						{% endif %}
+
+						<div class="flex items-center">
+							<p class="font-sofia text-sm">
+								<span class="font-bold">{{ section.author.name }}
+									~
+								</span>
+								{% if section.author.function %}
+									{{ section.author.function }}
+								{% endif %}
+							</p>
+						</div>
+					</div>
+				{% endif %}
+			</div>
+		</div> #}
+
+		{% if section.button.url and section.button.text %}
+			<div class="sm:text-right">
+				<a href="{{ section.button.url }}" class="btn btn--{% if section.color %}primary{% else %}secondary{% endif %} btn-has-icon-after">
+					{% if section.button.text %}
+						{{ section.button.text }}
+					{% else %}
+						{{ "Lees meer verhalen"|t }}
+					{% endif %}
+					<svg width="10" height="6" viewbox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon ml-6">
+						<path d="M7.812 0.156C7.532 0.492 6.986 1.038 6.3 1.038C5.642 1.038 5.194 0.73 4.774 0.562C4.326 0.366 3.836 0.0579998 3.066 0.0579998C2.086 0.0579998 1.274 0.674 0.784 1.346L1.47 2.242C1.82 1.822 2.366 1.36 3.038 1.36C3.71 1.36 4.158 1.668 4.578 1.836C5.026 2.032 5.558 2.34 6.328 2.34C7.266 2.34 8.092 1.752 8.568 1.01L7.812 0.156Z" fill="white"/>
+					</svg>
+				</a>
+			</div>
+		{% endif %}
+	</div>
+</section>

@@ -1,0 +1,12 @@
+<a class="project-item" href="{{ project.url }}">
+	{% if project.tag %}
+		{% include '@duplicare/components/partials/tag.html.twig' with { 'tag': project.tag } %}
+	{% endif %}
+	<div class="image-wrapper">
+		<img class="project-image" src="{{project.image.src}}" alt="{{ project.image.alt }}"/>
+	</div>
+	<h5 class="project-title">{{ project.title }}</h5>
+	{% if project.description %}
+		<p class="project-desc paragraph">{{project.description}}</p>
+	{% endif %}
+</a>

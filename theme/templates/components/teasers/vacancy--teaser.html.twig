@@ -1,0 +1,23 @@
+{% if vacancy.externalLink is not empty %}
+    <a href="{{ vacancy.externalLink.url }}" target="_blank" class="block no-underline bg-white hover:bg-secondary-100 mb-4">
+{% else %}
+    <a href="{{ vacancy.url }}" class="block no-underline bg-white hover:bg-secondary-100 mb-4">    
+{% endif %}
+    <article class="border-1 border-solid border-secondary-300 p-8 rounded-lg">
+        <div class="flex items-center justify-between mb-4">
+            <span class="inline-block font-sofia text-sm font-bold text-white py-1 px-2 rounded bg-secondary">{{ vacancy.extern|t|raw }}</span>
+            <small class="font-sofia text-sm text-tertiary-700">{{ vacancy.created }}</small>
+        </div>
+
+        <small class="font-sofia text-sm font-bold text-tertiary block">{{ vacancy.organisation }}</small>
+        <h5 class="h5 text-tertiary mb-4">{{ vacancy.title }}</h5>
+        <p class="paragraph text-tertiary-700 mb-6">
+            {{ vacancy.description|truncate(300, true, "...") }}
+        </p>
+        {% if vacancy.externalLink is not empty %}
+             <p class="font-sofia text-base font-extrabold text-primary">{{ vacancy.externalLink.text }}</p>
+        {% else %}
+            <p class="font-sofia text-base font-extrabold text-primary">{{'Read more'| trans}}</p>
+        {% endif %}
+    </article>
+</a>

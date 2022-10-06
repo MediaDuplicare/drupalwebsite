@@ -1,0 +1,12 @@
+<div class="mb-36">
+    {{ drupal_entity('block', 'breadcrumbs') }}
+
+    {% include '@duplicare/components/sections/hero.html.twig' with { 'section': historypage.hero } %}
+
+
+    <div class="timeline mt-20 container-fluid wrap">
+        {% for timeline_item in historypage.paragraphs %}
+            {% include '@duplicare/components/timeline-item.html.twig' with { 'timeline_item': timeline_item } %}
+        {% endfor %}
+    </div>
+</div>

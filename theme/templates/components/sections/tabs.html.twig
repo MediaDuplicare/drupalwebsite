@@ -1,0 +1,28 @@
+<section class="mb-20 sm:mb-40">
+    <div class="container-fluid wrap">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="max-w-2xl mx-auto text-left sm:text-center">
+                    <h2 class="h2 text-tertiary mb-4">{{ section.title }}</h2>
+                    <p class="h6 text-tertiary-700 mb-10">{{ section.description }}</p>
+                </div>
+                <div class="tabs-container flex flex-col items-center justify-center sm:flex-row">
+                    {% for key, education in section.tabs %}
+                        <button
+                                type="button" data-tab="{{ education.title }}"
+                                class="font-sofia font-medium tab-link {{ key != 0 ? 'text-secondary bg-secondary-100' : 'text-white bg-secondary' }} rounded-lg py-2 px-4 paragraph mb-2 border-0 cursor-pointer w-full sm:w-auto text-left sm:text-center sm:mr-2 sm:mb-0 hover:bg-secondary hover:text-white">
+                            {{ education.title }}
+                        </button>
+                    {% endfor %}
+                </div>
+                <div>
+                    {% for key, education in section.tabs %}
+                        <div id="{{ education.title }}" class="tab-content {{ key != 0 ? 'hidden' : '' }}">
+                            {% include '@duplicare/components/paragraphs/text-image.html.twig' with { 'paragraph': education, 'container': false } %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,29 @@
+<section class="container-fluid wrap">
+    <div class="bg-secondary text-white rounded-lg py-4 sm:py-6 px-6 sm:px-12 flex flex-col sm:flex-row items-center justify-between">
+        <div class="flex items-center justify-between w-full hidden sm:block">
+            <p class="font-sofia text-sm font-bold uppercase">{{ section.title }}</p>
+        </div>
+
+        <div class="w-full">{# This wrapper is used to toggle "is-active" of childs "js-toggle" #}
+            <div class="flex items-center justify-between w-full sm:hidden js-toggle">
+                <p class="font-sofia text-sm font-bold uppercase">{{ section.title }}</p>
+                <button type="button" class="bg-transparent border-0">
+                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.75 2.375H1.25L6.25 8.2875V12.375L8.75 13.625V8.2875L13.75 2.375Z" stroke="white"
+                                stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <nav role="navigation" aria-label="SubMenu" class="submenu">
+            {% for link in section.links %}
+                {% if link.isButton %}
+                    <a {% if link.targetBlank %} target="_{{ link.targetBlank }}" {% endif%} href="{{ link.link.url }}" target="_blank" class="{% if link.isActive %} is-active {% endif %} btn btn--primary btn-small">{{ link.link.text }}</a>
+                {% else %}
+                    <a {% if link.targetBlank %} target="_{{ link.targetBlank }}" {% endif%} href="{{ link.link.url }}" target="_blank" class="{% if link.isActive %} is-active {% endif %} submenu__link">{{ link.link.text }}</a>
+                {% endif %}
+            {% endfor %}
+        </nav>
+    </div>
+</section>

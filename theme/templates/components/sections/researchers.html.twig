@@ -1,0 +1,11 @@
+<section class="researchers-grid container-fluid">
+	<div class="row">
+		<div class="col-xs-8 col-xs-offset-2">
+			<div class="block-grid--inner grid-2">
+				{% for researcher in section.items %}
+					{% include '@duplicare/components/teasers/person--teaser.html.twig' with { 'person': researcher } %}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</section>

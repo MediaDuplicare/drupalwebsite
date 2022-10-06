@@ -1,0 +1,15 @@
+{% include '@duplicare/components/sections/hero.html.twig' with { 'section': researchGroup.hero } %}
+{% if researchGroup.menu %}
+    {% include '@duplicare/components/submenu.html.twig' with { 'section': researchGroup.menu } %}
+{% endif %}
+{{ drupal_entity('block', 'breadcrumbs') }}
+
+<div class="container-fluid wrap">
+    <div class="row">
+        <div class="col-xs-12 col-sm-10">
+          {% include '@duplicare/components/paragraphs/wrapper.html.twig' with { 'paragraphs': researchGroup.paragraphs } %}
+        </div>
+    </div>
+</div>
+
+{% include '@duplicare/components/sections/wrapper.html.twig' with { 'sections': researchGroup.sections } %}

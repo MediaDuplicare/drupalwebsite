@@ -1,0 +1,33 @@
+<div class="breadcrumb-wrapper hero--align">
+    {{ drupal_entity('block', 'breadcrumbs') }}
+</div>
+{% include '@duplicare/components/sections/hero.html.twig' with { 'section': article.hero, 'thispage' : 'article-detail' } %}
+
+<div class="container-fluid wrap mt-10">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            {% include '@duplicare/components/paragraphs/wrapper.html.twig' with { 'paragraphs': article.paragraphs} %}
+        </div>
+
+        <div class="col-xs-12 col-sm-4">
+            <div class="bg-secondary rounded-lg px-8 py-12">
+                <h5 class="h5 text-white mb-2">{{ 'Extra informatie'|t }}</h5>
+                <ul class="list text-white mb-10">
+                    <li>{{ article.created }}</li>
+                </ul>
+                <div class="flex items-center mb-4">
+                    {% if article.author.avatar %}
+                    <img src="{{ article.author.avatar }}" class="h-50 w-50 rounded-full mr-2" />
+                    {% endif %}
+
+                    <div>
+                        <h6 class="font-sofia text-sm font-bold text-white">{{ article.author.name }} ~</h6>
+                        <p class="font-sofia text-xs text-white">{{ article.author.roles|last }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include '@duplicare/components/sections/wrapper.html.twig' with { 'sections': article.sections } %}

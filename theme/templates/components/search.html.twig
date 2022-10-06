@@ -1,0 +1,26 @@
+<form action="{{ url('<front>') }}/search" method="GET" class="flex w-full">
+    <div class="input-wrapper">
+        <svg width="16" height="16" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="input-wrapper__icon">
+            <path fill="#e30613"
+                  d="M15.7812 13.8438L12.6562 10.7188C12.5 10.5938 12.3125 10.5 12.125 10.5H11.625C12.4688 9.40625 13 8.03125 13 6.5C13 2.9375 10.0625 0 6.5 0C2.90625 0 0 2.9375 0 6.5C0 10.0938 2.90625 13 6.5 13C8 13 9.375 12.5 10.5 11.625V12.1562C10.5 12.3438 10.5625 12.5312 10.7188 12.6875L13.8125 15.7812C14.125 16.0938 14.5938 16.0938 14.875 15.7812L15.75 14.9062C16.0625 14.625 16.0625 14.1562 15.7812 13.8438ZM6.5 10.5C4.28125 10.5 2.5 8.71875 2.5 6.5C2.5 4.3125 4.28125 2.5 6.5 2.5C8.6875 2.5 10.5 4.3125 10.5 6.5C10.5 8.71875 8.6875 10.5 6.5 10.5Z"
+                  fill="#1D71B8"/>
+        </svg>
+        {% if exposed %}
+            <div class="searchBar w-full">{{ exposed }}</div>
+        {% else %}
+            <input id="edit-aggregated-field" type="text" data-drupal-selector="edit-aggregated-field" name="aggregated_field"
+                   placeholder="{{ 'Ik ben op zoek naar ........'|trans }}" class="input--search"/>
+        {% endif %}
+    </div>
+
+    {% if mobile %}
+        <button type="submit" class="btn btn--primary btn-mobile-search">
+            <svg width="7" height="14" viewBox="0 0 7 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.200025 14C0.200025 11.824 1.51755 10.6998 2.57526 9.79702C3.54069 8.97374 4.3031 8.32364 4.3031 6.99929C4.3031 5.67495 3.54069 5.02626 2.57526 4.20298C1.51755 3.30022 0.200025 2.17601 0.200025 0L2.0457 0C2.0457 1.32292 2.8081 1.97445 3.77353 2.79773C4.83267 3.7005 6.14877 4.82328 6.14877 6.99929C6.14877 9.17531 4.83267 10.2995 3.77353 11.2023C2.8081 12.0256 2.0457 12.6771 2.0457 14H0.200025Z"
+                      fill="white"/>
+            </svg>
+        </button>
+    {% else %}
+        <button type="submit" class="btn btn--primary">{{ "Zoeken"|trans }}</button>
+    {% endif %}
+</form>

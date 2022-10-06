@@ -1,0 +1,21 @@
+<div class="splashpage">
+    <div class="splashpage__header">
+        <div class="container-fluid wrap">
+            <div class="row">
+                <h1 class="col-xs-12 col-sm-8 splashpage-title mb-4 sm:mb-0">{{ page.title }}</h1>
+                <p class="col-xs-12 col-sm-6 col-sm-offset-6 splashpage-intro">{{ page.intro }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="splashpage__main">
+        <div class="-mt-30">
+            <div class="container-fluid wrap">
+                <div class="row">
+                    <div class="col-xs-12">
+                        {% include '@duplicare/components/paragraphs/wrapper.html.twig' with { 'paragraphs': page.paragraphs, 'wrap': true } %}
+                     <div>
+                </div>
+            </div>
+        <div>
+    </div>
+</div>

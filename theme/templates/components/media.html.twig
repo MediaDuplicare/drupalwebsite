@@ -1,0 +1,7 @@
+{% if media.type == 'image' %}
+<img src="{{ media.image.src }}" alt="{{ media.image.alt }}" class="image w-full" />
+{% endif %}
+
+{% if media.video %}
+<iframe src="{{ media.video.src }}" class="rounded-lg w-full"></iframe>
+{% endif %}

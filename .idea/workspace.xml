@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6634f5a-93e4-4e38-99ad-473c20f299bf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3c016831-e21b-4842-bf50-5cd8ac472f6e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3c016831-e21b-4842-bf50-5cd8ac472f6e.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/duplicare.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/duplicare.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f6634f5a-93e4-4e38-99ad-473c20f299bf" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -178,7 +173,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/xander/projects/duplicare",
+    "last_opened_file_path": "/home/xander/viavictor/ap-website",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -216,7 +211,7 @@
       <workItem from="1653978234555" duration="1644000" />
       <workItem from="1658817153999" duration="6479000" />
       <workItem from="1664264444235" duration="767000" />
-      <workItem from="1665055521276" duration="1169000" />
+      <workItem from="1665055521276" duration="1521000" />
     </task>
     <servers />
   </component>

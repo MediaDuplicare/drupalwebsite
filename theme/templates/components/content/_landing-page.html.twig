@@ -1,0 +1,14 @@
+<div class="breadcrumb-wrapper {{ is_front ? '' : 'hero--align'}}">
+    {{ drupal_entity('block', 'breadcrumbs') }}
+</div>
+{% include '@duplicare/components/sections/hero.html.twig' with { 'section': landingPage.hero } %}
+
+<div class="container-fluid wrap">
+    <div class="row">
+        <div class="col-xs-12">
+            {% include '@duplicare/components/paragraphs/wrapper.html.twig' with { 'paragraphs': landingPage.paragraphs, 'thisPage' : 'landing-page' } %}
+        </div>
+    </div>
+</div>
+
+{% include '@duplicare/components/sections/wrapper.html.twig' with { 'sections': landingPage.sections } %}

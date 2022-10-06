@@ -1,0 +1,15 @@
+<a href="{{ article.url }}" class="no-underline text-tertiary hover:text-secondary">
+	<article class="article relative">
+		{% if article.category %}
+		<span class="absolute py-1 px-2 bg-primary text-white font-sofia text-sm font-bold rounded top-4 left-4">{{ article.category }}</span>
+		{% endif %}
+
+		<img src="{{ article.image.src }}" alt="{{ article.image.alt }}" class="object-cover w-full rounded-lg mb-4"/>
+
+		<h6 class="h6">{{ article.title }}</h6>
+
+		{% if article.description and large %}
+			<p class="font-sofia text-lg text-tertiary-700 mt-2">{{ article.description }}</p>
+		{% endif %}
+	</article>
+</a>

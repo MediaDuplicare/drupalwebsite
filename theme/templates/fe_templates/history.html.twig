@@ -1,0 +1,17 @@
+<div class="mb-36">
+    <div class="container wrap">
+        {% include '@duplicare/components/breadcrumb.html.twig' with { 'breadcrumb': historypage.breadcrumb } %}
+
+        <div class="mt-8">
+            {% include '@duplicare/components/sections/hero.html.twig' with { 'section': historypage.hero } %}
+        </div>
+
+        <div class="timeline mt-20">
+        {% for timeline_item in historypage.timeline %}
+            {% include '@duplicare/components/timeline-item.html.twig' with { 'timeline_item': timeline_item } %}
+        {% endfor %}
+        </div>
+
+        <a href="#" class="btn btn--primary mt-10">Primary button</a>
+    </div>
+</div>

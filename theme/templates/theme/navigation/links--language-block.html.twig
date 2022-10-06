@@ -1,0 +1,73 @@
+{#
+/**
+ * @file
+ * Theme override for a set of links.
+ *
+ * Available variables:
+ * - attributes: Attributes for the UL containing the list of links.
+ * - links: Links to be output.
+ *   Each link will have the following elements:
+ *   - link: (optional) A render array that returns a link. See
+ *     template_preprocess_links() for details how it is generated.
+ *   - text: The link text.
+ *   - attributes: HTML attributes for the list item element.
+ *   - text_attributes: (optional) HTML attributes for the span element if no
+ *     'url' was supplied.
+ * - heading: (optional) A heading to precede the links.
+ *   - text: The heading text.
+ *   - level: The heading level (e.g. 'h2', 'h3').
+ *   - attributes: (optional) A keyed list of attributes for the heading.
+ *   If the heading is a string, it will be used as the text of the heading and
+ *   the level will default to 'h2'.
+ *
+ *   Headings should be used on navigation menus and any list of links that
+ *   consistently appears on multiple pages. To make the heading invisible use
+ *   the 'visually-hidden' CSS class. Do not use 'display:none', which
+ *   removes it from screen readers and assistive technology. Headings allow
+ *   screen reader and keyboard only users to navigate to or skip the links.
+ *   See http://juicystudio.com/article/screen-readers-display-none.php and
+ *   http://www.w3.org/TR/WCAG-TECHS/H42.html for more information.
+ *
+ * @see template_preprocess_links()
+ */
+#}
+{% if links -%}
+    <div class="language-switcher">
+    {%- if heading -%}
+        {%- if heading.level -%}
+            <{{ heading.level }}{{ heading.attributes }}>{{ heading.text }}</{{ heading.level }}>
+        {%- else -%}
+            <h2{{ heading.attributes }}>{{ heading.text }}</h2>
+        {%- endif -%}
+    {%- endif -%}
+    {% set site_url = url('<current>') %}
+    <button type="button" class="language-switcher__button js-toggle">
+        {% if '/nl' in site_url['#markup'] %}
+            NL
+        {% elseif '/fr' in site_url['#markup'] %}
+            FR
+        {% elseif '/en' in site_url['#markup'] %}
+            EN
+        {% endif %}
+        <svg width="11" height="5" viewbox="0 0 11 5" fill="none" xmlns="http://www.w3.org/2000/svg"
+             class="ml-2">
+            <path d="M10.0557 0.00089407C8.50137 0.00089407 7.69837 0.941985 7.05354 1.69749C6.46548 2.38709 6.00112 2.93166 5.05516 2.93166C4.1092 2.93166 3.64585 2.38709 3.05779 1.69749C2.41296 0.941985 1.60996 0.00089407 0.0556641 0.00089407V1.31923C1.00061 1.31923 1.46599 1.86381 2.05404 2.5534C2.69888 3.30992 3.50087 4.25 5.05516 4.25C6.60945 4.25 7.41245 3.30992 8.05729 2.5534C8.64534 1.86381 9.11072 1.31923 10.0557 1.31923V0.00089407Z"
+                  fill="#E30613"/>
+        </svg>
+    </button>
+    <ul{{ attributes.addClass("language-switcher__dropdown") }}>
+        {%- for item in links -%}
+                <li{{ item.attributes.addClass("mb-2") }}>
+                    {%- if item.link -%}
+                        <span hidden="hidden">{{ item.link }}</span>
+                        <a href="{{ item.link["#url"] }}" class="block">{{ item.link["#title"]|upper }}</a>
+                    {%- elseif item.text_attributes -%}
+                        <span{{ item.text_attributes.addClass("block") }}>{{ item.text|upper }}</span>
+                    {%- else -%}
+                        {{ item.text|upper }}
+                    {%- endif -%}
+                </li>
+        {%- endfor -%}
+    </ul>
+    </div>
+{%- endif %}

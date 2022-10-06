@@ -1,0 +1,17 @@
+registerform:
+  firstname:
+    label: Voornaam
+  name:
+    label: Naam
+  email:
+    label: E-mailadres
+  phone:
+    label: Telefoonnummer
+  company:
+    label: Bedrijfsnaam
+  dropdown:
+    label: Form label
+    placeholder: Kies 1 van onderstaande opties
+  message:
+    label: Extra informatie
+    input: ""

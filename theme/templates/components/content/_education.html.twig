@@ -1,0 +1,15 @@
+{% include '@duplicare/components/sections/hero.html.twig' with { 'section': education.hero } %}
+{% if education.menu %}
+    {% include '@duplicare/components/submenu.html.twig' with { 'section': education.menu } %}
+{% endif %}
+{{ drupal_entity('block', 'breadcrumbs') }}
+
+<div class="container-fluid wrap">
+    <div class="row">
+        <div class="col-xs-12">
+            {% include '@duplicare/components/paragraphs/wrapper.html.twig' with { 'paragraphs': education.paragraphs } %}
+        </div>
+    </div>
+</div>
+
+{% include '@duplicare/components/sections/wrapper.html.twig' with { 'sections': education.sections } %}

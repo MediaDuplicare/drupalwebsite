@@ -1,0 +1,13 @@
+projectgroups:
+  - title: "Project groep"
+    description: "Cras viverra ultrices nibh tortor tincidunt et mi. Quisque quam bibendum vestibulum velit eleifend convallis risus. Vulputate tristique nulla elit etiam montes. Pellentesque adipiscing urna ipsum volutpat."
+    image:
+      src: "/themes/custom/ama/src/images/placeholders/unsplash_JzdrZzZ50tA.png"
+      alt: "Project group image alt"
+    url: "#"
+  - title: "Project groep"
+    description: "Cras viverra ultrices nibh tortor tincidunt et mi. Quisque quam bibendum vestibulum velit eleifend convallis risus. Vulputate tristique nulla elit etiam montes. Pellentesque adipiscing urna ipsum volutpat."
+    image:
+      src: "/themes/custom/ama/src/images/placeholders/unsplash_eZWGK5sIiBM.png"
+      alt: "Project group image alt"
+    url: "#"

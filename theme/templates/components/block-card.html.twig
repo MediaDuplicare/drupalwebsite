@@ -1,0 +1,17 @@
+<a class="researcher-item" href="{{block.link.url}}">
+	{% if block.person %}
+		<div class="item--person">
+			<img src="{{block.person.image}}">
+			<div class="info-wrapper">
+				<h6 class="res-name">{{block.person.name}}</h6>
+				<p class="res-function">{{block.person.function}}</p>
+			</div>
+		</div>
+	{% endif %}
+	{% if block.title %}
+		<h6 class="item--title">{{block.title}}</h6>
+	{% endif %}
+	{% if block.description %}
+		<p class="item--text">{{block.description}}</p>
+	{% endif %}
+</a>

@@ -1,0 +1,63 @@
+{% if paragraphs is not empty %}
+    <div class="paragraphs">
+        {% for paragraph in paragraphs %}
+        
+            {% if paragraph.type == 'text' %}
+                {% include '@duplicare/components/paragraphs/text.html.twig' with { 'paragraph': paragraph.value } %}
+            {% endif %}
+
+            {% if paragraph.type == 'intro' %}
+                {% include '@duplicare/components/paragraphs/intro-text.html.twig' with { 'paragraph': paragraph.value, 'thisPage' : thisPage } %}
+            {% endif %}
+
+            {% if paragraph.type == 'column_text' %}
+                {% include '@duplicare/components/paragraphs/col-text.html.twig' with { 'paragraph': paragraph.value} %}
+            {% endif %}
+
+            {% if paragraph.type == 'slider' %}
+                {% include '@duplicare/components/paragraphs/slider.html.twig' with { 'paragraph': paragraph.value } %}
+            {% endif %}
+
+            {% if paragraph.type == 'cta_button' %}
+                {% include '@duplicare/components/paragraphs/text-image.html.twig' with { 'paragraph': paragraph.value } %}
+            {% endif %}
+
+            {% if paragraph.type == 'cta_button_image' %}
+                {% include '@duplicare/components/paragraphs/text-image.html.twig' with { 'paragraph': paragraph.value } %}
+            {% endif %}
+
+            {% if paragraph.type == 'image_and_text' %}
+               {% include '@duplicare/components/paragraphs/text-image.html.twig' with { 'paragraph': paragraph.value } %}
+            {% endif %}
+
+            {% if paragraph.type == 'tabs' %}
+                {% include '@duplicare/components/paragraphs/tabs.html.twig' with { 'paragraph': paragraph.value} %}
+            {% endif %}
+
+            {% if paragraph.type == 'image_caption' %}
+                {% include '@duplicare/components/paragraphs/image.html.twig' with { 'media': paragraph.value } %}
+            {% endif %}
+
+            {% if paragraph.type == 'form' %}
+                {% include '@duplicare/components/form--register.html.twig' with { 'formParagraph': paragraph.value } %}
+            {% endif %}
+
+            {% if paragraph.type == 'contact' %}
+                {% include '@duplicare/components/paragraphs/contact-info.html.twig' with { 'paragraph': paragraph.value } %}
+            {% endif %}
+
+            {% if paragraph.type == 'button' %}
+                {% include '@duplicare/components/paragraphs/button.html.twig' with { 'paragraph': paragraph.value } %}
+            {% endif %}
+
+            {% if paragraph.type == 'clickable_blocks' %}
+                {% include '@duplicare/components/paragraphs/clickable-blocks.html.twig' with { 'paragraph': paragraph.value } %}
+            {% endif %}
+
+            {% if paragraph.type == 'faqs' %}
+                {% include '@duplicare/components/paragraphs/faqs.html.twig' with { 'paragraph': paragraph.value } %}
+            {% endif %}
+            
+        {% endfor %}
+    </div>
+{% endif %}

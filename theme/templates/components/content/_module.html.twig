@@ -1,0 +1,14 @@
+<div class="breadcrumb-wrapper hero--align">
+    {{ drupal_entity('block', 'breadcrumbs') }}
+</div>
+{% include '@duplicare/components/sections/hero.html.twig' with { 'section': module.hero } %}
+
+<div class="container-fluid wrap mt-10">
+    <div class="row">
+        <div class="col-xs-12">
+            {% include '@duplicare/components/paragraphs/wrapper.html.twig' with { 'paragraphs': module.paragraphs } %}
+        </div>
+    </div>
+</div>
+
+{% include '@duplicare/components/sections/wrapper.html.twig' with { 'sections': article.sections } %}

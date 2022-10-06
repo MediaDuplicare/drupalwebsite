@@ -1,0 +1,21 @@
+<div class="bg-tertiary px-8 py-12 rounded-lg mb-4">
+	<h5 class="h5 text-white mb-4">{{ 'Onderzoekers'|t }}</h5>
+
+	{% for researcher in researchers %}
+		<div class="flex items-center mb-4">
+			{% if researcher.image %}
+				<img src="{{researcher.image.src}}" class="border-blue h-50 w-50 rounded-full mr-4"/>
+			{% else %}
+				<img src="{{ base_path ~ directory }}/src/images/placeholders/person_placeholder.png" title="person" class="border-blue h-50 w-50 rounded-full mr-4"/>
+			{% endif %}
+			<div>
+				<h6 class="font-sofia text-sm font-bold text-primary-100">{{ researcher.title }}
+					~
+				</h6>
+				{% if researcher.function %}
+					<p class="font-sofia text-xs text-primary-100">{{researcher.function}}</p>
+				{% endif %}
+			</div>
+		</div>
+	{% endfor %}
+</div>

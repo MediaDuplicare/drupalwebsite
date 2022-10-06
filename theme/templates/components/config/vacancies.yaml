@@ -1,0 +1,33 @@
+vacanciespage:
+  title: Vacatures
+  description: Metus ultrices varius faucibus nec facilisi massa eget donec phasellus. Urna egestas porta pellentesque dui, enim risus magnis fermentum. Mauris accumsan, proin ut diam. Mi mauris eget molestie sit vulputate cras. Orci varius et adipiscing ultricies malesuada morbi.
+  filters:
+    - Type vacature
+      - Checkbox label
+      - Checkbox label
+    - Werkzaamheden
+      - Checkbox label
+      - Checkbox label
+      - Checkbox label
+      - Checkbox label
+  vacancies:
+    - title: Assistant Manager - Business Analysis & Chartering
+      description: Amet, duis varius id aliquam dui, proin venenatis ipsum amet. Congue ultrices in pellentesque lacus etiam rutrum cras porttitor diam. Erat lacus, at pellentesque nec sollicitudin odio donec integer cursus.
+      category: Extern
+      company: Euro Marine Logistics
+      node_url: "#"
+    - title: Assistant Manager - Business Analysis & Chartering
+      description: Amet, duis varius id aliquam dui, proin venenatis ipsum amet. Congue ultrices in pellentesque lacus etiam rutrum cras porttitor diam. Erat lacus, at pellentesque nec sollicitudin odio donec integer cursus.
+      category: Extern
+      company: Euro Marine Logistics
+      node_url: "#"
+    - title: Assistant Manager - Business Analysis & Chartering
+      description: Amet, duis varius id aliquam dui, proin venenatis ipsum amet. Congue ultrices in pellentesque lacus etiam rutrum cras porttitor diam. Erat lacus, at pellentesque nec sollicitudin odio donec integer cursus.
+      category: Extern
+      company: Euro Marine Logistics
+      node_url: "#"
+    - title: Assistant Manager - Business Analysis & Chartering
+      description: Amet, duis varius id aliquam dui, proin venenatis ipsum amet. Congue ultrices in pellentesque lacus etiam rutrum cras porttitor diam. Erat lacus, at pellentesque nec sollicitudin odio donec integer cursus.
+      category: Extern
+      company: Euro Marine Logistics
+      node_url: "#"

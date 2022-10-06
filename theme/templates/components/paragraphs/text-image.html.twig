@@ -1,0 +1,24 @@
+<div class="paragraph paragraph--text-image mb-20">
+    <div class="row">
+        <div class="col-xs-12 {{ paragraph.media ? 'col-md-6' : '' }}">
+            {% if paragraph.title %}
+                <h2 class="h2 text-tertiary mb-4">{{ paragraph.title }}</h2>
+            {% endif %}
+
+            <div class="richtext text-tertiary-700 pr-4">
+                {{ paragraph.description|raw }}
+            </div>
+
+            {% if paragraph.link %}
+                <a href="{{ paragraph.link.url }}" {{ paragraph.nTab }}
+                   class="btn btn--secondary mt-10 mb-10">{{ paragraph.link.text }}</a>
+            {% endif %}
+        </div>
+
+        {% if paragraph.media %}
+            <div class="col-xs-12 col-md-6">
+                {% include '@duplicare/components/media.html.twig' with { 'media': paragraph.media } %}
+            </div>
+        {% endif %}
+    </div>
+</div>

@@ -1,0 +1,113 @@
+<section id="hero" class="hero mb-10 {{ landingPage.front ? 'front' : '' }} {{ section.media ? 'mb-20 sm:mb-40' : 'mt-25' }}">
+	<div class="container-fluid wrap">
+		<div class="row flex {{ is_front ? 'items-start' : 'items-center'}}">
+			<div class="col-xs-12 {{ section.media ? 'col-md-6' : 'col-md-10' }}">
+				<div class="hero-intro--wrapper">
+					{% if section.logo %}
+						<img src="{{ section.logo.image.src }}" class="max-h-52"/>
+					{% endif %}
+					{% if section.title %}
+						<h1 class="h1 text-tertiary mb-4">
+							{{ section.title }}
+							<svg width="39" height="12" viewbox="0 0 39 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M35.284 1.404C33.788 3.036 31 5.552 27.736 5.552C24.472 5.552 22.228 4.124 20.188 3.24C18.012 2.356 15.564 0.792 11.756 0.792C7.132 0.792 3.188 3.716 0.944 6.708L3.936 10.72C5.704 8.748 8.424 6.572 11.688 6.572C14.952 6.572 17.196 8 19.236 8.884C21.48 9.768 23.996 11.332 27.804 11.332C32.292 11.332 36.304 8.544 38.48 5.28L35.284 1.404Z" fill="#1D71B8"/>
+							</svg>
+						</h1>
+					{% endif %}
+
+					{% if section.description %}
+						<h6 class="h6 text-tertiary-700 mb-4 hero-text">{{ section.description|raw }}</h6>
+					{% endif %}
+
+					{% if section.link %}
+						<a href="{{ section.link.url }}" {{ section.newTab }} class="btn btn--secondary btn-has-icon-after hero--button">
+							{{ section.link.text }}
+							<svg width="10" height="6" viewbox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon ml-6">
+								<path d="M7.812 0.156C7.532 0.492 6.986 1.038 6.3 1.038C5.642 1.038 5.194 0.73 4.774 0.562C4.326 0.366 3.836 0.0579998 3.066 0.0579998C2.086 0.0579998 1.274 0.674 0.784 1.346L1.47 2.242C1.82 1.822 2.366 1.36 3.038 1.36C3.71 1.36 4.158 1.668 4.578 1.836C5.026 2.032 5.558 2.34 6.328 2.34C7.266 2.34 8.092 1.752 8.568 1.01L7.812 0.156Z" fill="white"/>
+							</svg>
+						</a>
+					{% endif %}
+
+					{% for key, button in section.buttons %}
+						<a href="{{ button.url }}" class="btn {% if key == 0 %}btn--primary{% else %}btn--secondary{% endif %} btn-has-icon-after mt-8">
+							{{ button.text }}
+
+							<svg width="10" height="6" viewbox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon ml-6">
+								<path d="M7.812 0.156C7.532 0.492 6.986 1.038 6.3 1.038C5.642 1.038 5.194 0.73 4.774 0.562C4.326 0.366 3.836 0.0579998 3.066 0.0579998C2.086 0.0579998 1.274 0.674 0.784 1.346L1.47 2.242C1.82 1.822 2.366 1.36 3.038 1.36C3.71 1.36 4.158 1.668 4.578 1.836C5.026 2.032 5.558 2.34 6.328 2.34C7.266 2.34 8.092 1.752 8.568 1.01L7.812 0.156Z" fill="white"/>
+							</svg>
+						</a>
+					{% endfor %}
+				</div>
+			</div>
+
+			{% if section.media %}
+				<div class="col-xs-12 {{ thispage == 'article-detail'  ? 'col-md-6 xcol-md-offset-1' : 'col-md-5 col-md-offset-1' }}">
+					<div class="hero__media {{ landingPage.front ? 'media--front' : 'media--secondary' }} {{ is_front ? 'homepage':'media--secondary'}}">
+						{% include '@duplicare/components/media.html.twig' with { 'media': section.media } %}
+					</div>
+				</div>
+			{% endif %}
+		</div>
+
+		{% if section.image_notification %}
+			<section class="intro-images">
+				<div class="row">
+					{% if section.image_notification.image %}
+						<div class="col-xs-12 col-md-3">
+							<div class="image-wrapper">
+								<img src="{{ section.image_notification.image.src }}" alt="{{ section.image_notification.image.alt }}"/>
+							</div>
+						</div>
+					{% endif %}
+					<div class="col-xs-12 col-md-5 col-md-offset-2">
+						<div class="notification-wrapper">
+							<h4 class="h4-text h4 mb-4">{{ section.image_notification.title }}</h4>
+							<p class="paragraph text-primary-100 mb-10">{{ section.image_notification.description }}</p>
+							<a class="btn btn--secondary" href="{{ section.image_notification.button.url }}">
+								<span>{{ section.image_notification.button.text }}</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		{% endif %}
+
+		{% if section.two_pictures %}
+			<section class="intro-images two-images">
+				<div class="two-images--wrapper">
+					<div class="row">
+						<div class="col-xs-12 col-md-3">
+							<div class="image-wrapper first">
+								<img src="{{ section.two_pictures[0].src }}" alt="{{ section.two_pictures[0].alt }}"/>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-5 col-md-offset-2">
+							<div class="image-wrapper second">
+								<img src="{{ section.two_pictures[1].src }}" alt="{{ section.two_pictures[1].alt }}"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<div class="hero-swiper container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="swiper hero-slider">
+						<ul class="swiper-wrapper">
+							{% for image in section.two_pictures %}
+								<li class="swiper-slide">
+									<div class="image-wrapper">
+										{% set media = { 'image': image, 'type': 'image' } %}
+										{% include '@duplicare/components/media.html.twig' with { 'media': media } %}
+									</div>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+</section>

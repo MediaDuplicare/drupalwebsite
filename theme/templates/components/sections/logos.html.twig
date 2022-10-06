@@ -1,0 +1,14 @@
+<section class="bg-secondary-100 py-16 mb-20 last:mb-0">
+	<div class="container">
+		<div class="swiper logo-slider">
+			<div class="swiper-wrapper">
+                {% for logo in section.logos %}
+				<div class="swiper-slide">
+                    <img src="{{ logo.src }}" alt="{{ logo.alt }}" class="w-full" />
+                </div>
+                {% endfor %}
+			</div>
+            <div class="swiper-pagination"></div>
+		</div>
+	</div>
+</section>

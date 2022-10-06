@@ -1,0 +1,36 @@
+<footer role="contentinfo" class="bg-secondary">
+	<div class="container-fluid wrap">
+		<div class="row pt-10 pb-10 sm:pb-20">
+			{% include '@duplicare/components/menu--footer.html.twig' with { 'menu': footer_one_menu  } %}
+
+			{% include '@duplicare/components/menu--footer.html.twig' with { 'menu': footer_two_menu  } %}
+
+			{% include '@duplicare/components/menu--footer.html.twig' with { 'menu': footer_three_menu  } %}
+
+			<div class="col-xs-12 col-sm-3">
+				<h5 class="footer-title mb-4">{{'Contact'|trans}}</h5>
+				<p class="footer-text mb-2">
+					{{'Noordkasteel Oost 6'|trans}}<br>
+					{{'2030 Antwerp'|trans}}
+				</p>
+				<p class="mb-2 flex items-center">
+					<svg width="13" height="14" viewbox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2.5">
+						<path d="M11.9167 9.66497V11.29C11.9173 11.4408 11.8864 11.5901 11.8259 11.7284C11.7655 11.8666 11.6769 11.9907 11.5657 12.0926C11.4545 12.1946 11.3233 12.2723 11.1804 12.3206C11.0375 12.3689 10.8861 12.3869 10.7358 12.3733C9.06902 12.1922 7.46794 11.6226 6.06123 10.7104C4.75247 9.87875 3.64287 8.76915 2.81123 7.46039C1.89581 6.04729 1.32612 4.43843 1.14832 2.76414C1.13478 2.61435 1.15258 2.46338 1.20059 2.32085C1.24859 2.17832 1.32575 2.04734 1.42715 1.93627C1.52855 1.82519 1.65196 1.73644 1.78954 1.67567C1.92711 1.6149 2.07584 1.58345 2.22623 1.5833H3.85123C4.11411 1.58072 4.36895 1.67381 4.56827 1.84522C4.76759 2.01663 4.89778 2.25467 4.93457 2.51497C5.00315 3.03501 5.13035 3.54561 5.31373 4.03705C5.38661 4.23093 5.40238 4.44163 5.35918 4.6442C5.31598 4.84676 5.21562 5.0327 5.06998 5.17997L4.38207 5.86789C5.15316 7.22398 6.27598 8.3468 7.63207 9.11789L8.31998 8.42997C8.46726 8.28434 8.65319 8.18397 8.85576 8.14077C9.05832 8.09757 9.26903 8.11334 9.4629 8.18622C9.95434 8.3696 10.4649 8.4968 10.985 8.56539C11.2481 8.60251 11.4884 8.73504 11.6602 8.93778C11.832 9.14052 11.9232 9.39932 11.9167 9.66497Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+					<a href="tel:+32 (0)3 205 64 30" class="footer-text">+32 (0)3 205 64 30</a>
+				</p>
+				<p class="flex items-center">
+					<svg width="13" height="14" viewbox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2.5">
+						<path d="M2.16671 2.66663H10.8334C11.4292 2.66663 11.9167 3.15413 11.9167 3.74996V10.25C11.9167 10.8458 11.4292 11.3333 10.8334 11.3333H2.16671C1.57087 11.3333 1.08337 10.8458 1.08337 10.25V3.74996C1.08337 3.15413 1.57087 2.66663 2.16671 2.66663Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M11.9167 3.75L6.50004 7.54167L1.08337 3.75" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+					<a href="mailto:info@hzs.be" class="footer-text">info@hzs.be</a>
+				</p>
+			</div>
+		</div>
+
+		{% include '@duplicare/components/menu--bottom.html.twig' with { 'menu': bottom_menu  } %}
+
+
+	</div>
+</footer>

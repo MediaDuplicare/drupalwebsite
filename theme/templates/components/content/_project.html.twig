@@ -1,0 +1,26 @@
+<div class="breadcrumb-wrapper hero--align">
+    {{ drupal_entity('block', 'breadcrumbs') }}
+</div>
+{% include '@duplicare/components/sections/hero.html.twig' with { 'section': project.hero } %}
+
+<div class="container-fluid wrap mt-10">
+    <div class="row">
+        <div class="col-sm-9">
+            {% include '@duplicare/components/paragraphs/wrapper.html.twig' with { 'paragraphs': project.paragraphs } %}
+        </div>
+        <div class="col-xs-12 col-sm-3">
+
+            {% if project.researchers is not empty %}
+                {% include '@duplicare/components/content/inc/_researchers.html.twig' with { 'researchers': project.researchers } %}
+            {% endif %}
+
+            {% include '@duplicare/components/content/inc/_sidebar-contact.html.twig' with { 'project': project } %}
+
+            {% if project.researchGroup %}
+                {% include '@duplicare/components/partials/button.html.twig' with { 'url': path('entity.node.canonical', {'node': project.researchGroup.id  }), 'text': project.researchGroup.title.value, 'align': 'full', 'color': 'primary', 'tilde':false } %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% include '@duplicare/components/sections/wrapper.html.twig' with { 'sections': project.sections } %}

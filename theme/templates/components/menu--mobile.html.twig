@@ -1,0 +1,70 @@
+<div id="mobile-nav">
+    <div class="mobile-nav--inner py-6">
+        <div class="mb-8">
+            {% include '@duplicare/components/search.html.twig' with { mobile: true } %}
+        </div>
+
+        <ul class="menu flex flex-col">
+            {% for item in primary_nav.items %}
+                <li class="menu-item mb-6 {{ item.children ? 'has-dropdown' : '' }}">
+                    {% if item.children %}
+                        <button type="button" class="js-toggle flex items-center justify-between">
+                            {{ item.title }}
+
+                            <svg width="17" height="8" viewBox="0 0 17 8" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17 0.599762C14.3577 0.599762 12.9926 2.19962 11.8964 3.48398C10.8967 4.65629 10.1073 5.58207 8.49914 5.58207C6.89101 5.58207 6.10332 4.65629 5.10362 3.48398C4.0074 2.19962 2.6423 0.599762 0 0.599762V2.84094C1.60641 2.84094 2.39755 3.76672 3.39725 4.93902C4.49346 6.22511 5.85684 7.82324 8.49914 7.82324C11.1414 7.82324 12.5065 6.22511 13.6028 4.93902C14.6025 3.76672 15.3936 2.84094 17 2.84094V0.599762Z"
+                                      fill="#D4E2F1"/>
+                            </svg>
+                        </button>
+                        <ul class="menu dropdown">
+                            {% for child in item.children %}
+                                <li class="menu-item">
+                                    <a href="{{ child.url }}"
+                                       class="{% if primary_nav.current == child.url %} text-secondary-100{% else %} text-secondary-300{% endif %}">{{ child.title }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <a href="{{ item.url }}"
+                           class="h5 no-underline{% if primary_nav.current == item.url %} text-secondary-100{% else %} text-secondary-300{% endif %}">
+                            {{ item.title }}
+                        </a>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+
+        <ul class="menu flex flex-col">
+            {% for item in top_nav.items %}
+                <li class="menu-item mb-6 {{ item.children ? 'has-dropdown' : '' }}">
+                    <a href="{{ item.url }}"
+                       class="h6 no-underline{% if top_nav.current == item.url %} text-secondary-100{% else %} text-secondary-300{% endif %}">
+                        {{ item.title }}
+
+                        {% if item.children %}
+                            <svg width="11" height="5" viewbox="0 0 11 5" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                 class="ml-2">
+                                <path d="M10.0557 0.00089407C8.50137 0.00089407 7.69837 0.941985 7.05354 1.69749C6.46548 2.38709 6.00112 2.93166 5.05516 2.93166C4.1092 2.93166 3.64585 2.38709 3.05779 1.69749C2.41296 0.941985 1.60996 0.00089407 0.0556641 0.00089407V1.31923C1.00061 1.31923 1.46599 1.86381 2.05404 2.5534C2.69888 3.30992 3.50087 4.25 5.05516 4.25C6.60945 4.25 7.41245 3.30992 8.05729 2.5534C8.64534 1.86381 9.11072 1.31923 10.0557 1.31923V0.00089407Z"
+                                      fill="#E30613"/>
+                            </svg>
+                        {% endif %}
+                    </a>
+                    {% if item.children %}
+                        <ul class="menu dropdown">
+                            {% for child in item.children %}
+                                <li class="menu-item">
+                                    <a href="{{ child.url }}"
+                                       class="{% if top_nav.current == child.url %} text-secondary-100{% else %} text-secondary-300{% endif %}">{{ child.title }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="mobile-language">
+            {{ drupal_block('language_block:language_interface', wrapper=false) }}
+        </div>
+    </div>
+</div>

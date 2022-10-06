@@ -1,0 +1,8 @@
+<div class="paragraph paragraph--image">
+	<div class="image-wrapper">
+		{% include '@duplicare/components/media.html.twig' with { 'media': media } %}
+	</div>
+	{% if media.caption %}
+		<p class="font-sofia text-xs text-tertiary-700 mt-2">{{ media.caption }}</p>
+	{% endif %}
+</div>

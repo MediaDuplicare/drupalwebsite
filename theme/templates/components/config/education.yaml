@@ -1,0 +1,28 @@
+education:
+  hero:
+    title: Nautische wetenschappen
+    description: Metus ultrices varius faucibus nec facilisi massa eget donec phasellus. Urna egestas porta pellentesque dui, enim risus magnis fermentum. Mauris accumsan, proin ut diam. Mi mauris eget molestie sit vulputate cras. Orci varius et adipiscing ultricies malesuada morbi.
+    image:
+      src: /themes/custom/ama/src/images/placeholders/unsplash_asiJSIcFlBE.png
+      alt: Opleiding hero
+  subtitle: De studie
+  paragraphs:
+    - type: intro_text
+      value: Introductie over de opleiding. Amet, duis varius id aliquam dui, proin venenatis ipsum amet. Congue ultrices in pellentesque lacus etiam rutrum cras porttitor diam. Erat lacus, at pellentesque nec sollicitudin odio donec integer cursus. Nisi accumsan vitae fames pharetra suspendisse ut blandit augue malesuada. Egestas commodo ultricies sed volutpat. Et blandit venenatis scelerisque orci sed blandit. Semper vitae, tempus adipiscing mi placerat ultrices ut sagittis. Et in tristique sed justo morbi porttitor. Sed magna sed sed orci suspendisse lobortis ut vestibulum. 
+    - type: text
+      value: 
+        title: text paragraaf
+        content: Introductie over de opleiding. Amet, duis varius id aliquam dui, proin venenatis ipsum amet. Congue ultrices in pellentesque lacus etiam rutrum cras porttitor diam. Erat lacus, at pellentesque nec sollicitudin odio donec integer cursus. Nisi accumsan vitae fames pharetra suspendisse ut blandit augue malesuada. Egestas commodo ultricies sed volutpat. Et blandit venenatis scelerisque orci sed blandit. Semper vitae, tempus adipiscing mi placerat ultrices ut sagittis. Et in tristique sed justo morbi porttitor. Sed magna sed sed orci suspendisse lobortis ut vestibulum. 
+  sections:
+    - type: text_cards
+      value: 
+        title: Voor je start 
+        description: Viverra elementum, donec interdum nulla varius pharetra, dictumst lectus sociis. Mollis tristique pretium eget fames lectus tortor, quam vel. In est, at duis neque non. Cras vulputate velit, vel tellus faucibus facilisi. A, cursus id ac porttitor sit quam tempus risus, dignissim. Volutpat purus amet aliquam enim suspendisse lorem consequat at lectus. Sit tempor, facilisis sit ornare purus, eu nec. Sed metus aliquam interdum viverra quam consequat curabitur malesuada eleifend. Ullamcorper et praesent a adipiscing aenean ut aliquet vitae nullam. Neque massa, a in sit viverra et. In vitae risus risus blandit vulputate aliquam. Dictumst nunc, erat id volutpat libero. Aliquet blandit nulla enim sed parturient non in nec, dui. Nulla id congue vitae phasellus ornare. Sodales adipiscing pretium, ipsum nulla. Tristique orci, pellentesque libero mattis erat. Est, curabitur ipsum, quis donec nibh ac sit. Id sed libero mattis id consectetur rhoncus et nisl. Porttitor lacus, scelerisque risus vel. Suspendisse sollicitudin pulvinar ac posuere diam. Lacus, aliquam diam morbi euismod enim vestibulum sit volutpat semper. Pellentesque egestas dictumst ipsum pellentesque orci ultrices purus vel lectus. Nisi, nulla purus massa dui commodo, eleifend.
+        link: "#"
+        tips:
+          - title: Titel nog invullen
+            description: Ornare scelerisque sapien rhoncus fermentum tortor. Egestas erat aenean diam neque purus. Justo feugiat est et mollis nibh nibh facilisis pretium eleifend. Ultricies et faucibus et massa. Odio consequat morbi risus pellentesque ornare.
+          - title: Titel nog invullen
+            description: Ornare scelerisque sapien rhoncus fermentum tortor. Egestas erat aenean diam neque purus. Justo feugiat est et mollis nibh nibh facilisis pretium eleifend. Ultricies et faucibus et massa. Odio consequat morbi risus pellentesque ornare.
+          - title: Titel nog invullen
+            description: Ornare scelerisque sapien rhoncus fermentum tortor. Egestas erat aenean diam neque purus. Justo feugiat est et mollis nibh nibh facilisis pretium eleifend. Ultricies et faucibus et massa. Odio consequat morbi risus pellentesque ornare.

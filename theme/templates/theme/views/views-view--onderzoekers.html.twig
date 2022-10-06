@@ -1,0 +1,62 @@
+{#
+/**
+ * @file
+ * Default theme implementation for main view template.
+ *
+ * Available variables:
+ * - attributes: Remaining HTML attributes for the element.
+ * - css_name: A CSS-safe version of the view name.
+ * - css_class: The user-specified classes names, if any.
+ * - header: The optional header.
+ * - footer: The optional footer.
+ * - rows: The results of the view query, if any.
+ * - empty: The content to display if there are no rows.
+ * - pager: The optional pager next/prev links to display.
+ * - exposed: Exposed widget form/info to display.
+ * - feed_icons: Optional feed icons to display.
+ * - more: An optional link to the next page of results.
+ * - title: Title of the view, only used when displaying in the admin preview.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the view title.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the view title.
+ * - attachment_before: An optional attachment view to be displayed before the
+ *   view content.
+ * - attachment_after: An optional attachment view to be displayed after the
+ *   view content.
+ * - dom_id: Unique id for every view being printed to give unique class for
+ *   JavaScript.
+ *
+ * @see template_preprocess_views_view()
+ *
+ * @ingroup themeable
+ */
+#}
+
+
+<div class="pb-46">
+    {{ drupal_entity('block', 'breadcrumbs') }}
+    <div class="container-fluid wrap">
+        <div class="mb-10">
+            <h1 class="h1 text-tertiary mb-4">
+                {{display_title}}
+                <svg width="39" height="12" viewBox="0 0 39 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M35.284 1.404C33.788 3.036 31 5.552 27.736 5.552C24.472 5.552 22.228 4.124 20.188 3.24C18.012 2.356 15.564 0.792 11.756 0.792C7.132 0.792 3.188 3.716 0.944 6.708L3.936 10.72C5.704 8.748 8.424 6.572 11.688 6.572C14.952 6.572 17.196 8 19.236 8.884C21.48 9.768 23.996 11.332 27.804 11.332C32.292 11.332 36.304 8.544 38.48 5.28L35.284 1.404Z" fill="#1D71B8"/>
+                </svg>
+            </h1>
+            {% if header %}
+                <h6 class="h6 text-tertiary-700">{{ header }}</h6>
+            {% endif %}
+        </div>
+        <section class="researchers-grid">
+            {% if rows -%}
+                {{ rows }}
+            {% elseif empty -%}
+                {{ empty }}
+            {% endif %}
+
+            {{ pager }}
+        </section>
+    </div>
+</div>
+

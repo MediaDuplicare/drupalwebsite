@@ -1,0 +1,24 @@
+<section class="text-cards mb-20 sm:mb-40 pb-20">
+	<div class="container-fluid wrap">
+		<div class="row">
+			<div
+				class="col-xs-12 col-sm-6 mb-10 sm:mb-0">
+			
+				{% include '@duplicare/components/title-text.html.twig' with { 'content' : section } %}
+
+				{% if section.link %}
+					{% include '@duplicare/components/partials/button.html.twig' with { 'text': section.link.text, 'align': 'left', 'color': 'primary', 'tilde':false, 'url': section.link.url } %}
+				{% endif %}
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				{% if section.tips %}
+					<div class="block-grid--inner grid-1">
+						{% for tip in section.tips %}
+							{% include '@duplicare/components/block-card.html.twig' with { 'block': tip } %}
+						{% endfor %}
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</section>

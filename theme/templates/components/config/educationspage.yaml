@@ -1,0 +1,23 @@
+educationspage:
+  hero:
+    title: Onze opleidingen
+    description: Metus ultrices varius faucibus nec facilisi massa eget donec phasellus. Urna egestas porta pellentesque dui, enim risus magnis fermentum. Mauris accumsan, proin ut diam. Mi mauris eget molestie sit vulputate cras. Orci varius et adipiscing ultricies malesuada morbi.
+    image:
+      src: /themes/custom/ama/src/images/placeholders/unsplash_dH2xoqG0NpU.png
+      alt: Opleidingen hero
+  sections:
+    - type: educations
+      value:
+        educations:
+          - title: Nautische wetenschappen
+            description: Morbi eu lacus sed nec egestas. Lectus lectus ornare integer at eget massa pretium proin.
+            image:
+              src: /themes/custom/ama/src/images/placeholders/marc.png
+              alt: Picture of Marc
+            node_url: "#"
+          - title: Scheepwerktuig-kunde
+            description: Morbi eu lacus sed nec egestas. Lectus lectus ornare integer at eget massa pretium proin.
+            node_url: "#"
+          - title: Hydrography masteropleiding
+            description: Morbi eu lacus sed nec egestas. Lectus lectus ornare integer at eget massa pretium proin.
+            node_url: "#"

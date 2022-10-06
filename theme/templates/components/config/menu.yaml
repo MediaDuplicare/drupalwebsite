@@ -1,0 +1,30 @@
+primary_nav:
+  items:
+    - title: Maritiem leven
+      url: '#'
+    - title: Opleidingen
+      children:
+        - title: Opleidingen
+          url: '#'
+        - title: Nautische wetenschappen
+          url: '#'
+        - title: Scheepswerktuigkunde
+          url: '#'
+        - title: Hydrograpfy
+          url: '#'
+    - title: Studenten
+      url: '#'
+    - title: Research
+      url: '#'
+    - title: Over ons
+      url: '#'
+    - title: Training
+      url: '#'
+
+top_nav:
+  - title: Webcam
+    url: '#'
+  - title: Vacatures
+    url: '#'
+  - title: NL
+    url: '#'

@@ -1,0 +1,37 @@
+<div class="breadcrumb-wrapper hero--align">
+    {{ drupal_entity('block', 'breadcrumbs') }}
+</div>
+
+<div class="container-fluid wrap">
+    <div class="row slider-row-reset">
+        <div class="col-xs-12 col-sm-10">
+
+            <h1 class="h1 text-tertiary mb-4 mt-20">
+                {{ person.title }}
+                <svg width="39" height="12" viewbox="0 0 39 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M35.284 1.404C33.788 3.036 31 5.552 27.736 5.552C24.472 5.552 22.228 4.124 20.188 3.24C18.012 2.356 15.564 0.792 11.756 0.792C7.132 0.792 3.188 3.716 0.944 6.708L3.936 10.72C5.704 8.748 8.424 6.572 11.688 6.572C14.952 6.572 17.196 8 19.236 8.884C21.48 9.768 23.996 11.332 27.804 11.332C32.292 11.332 36.304 8.544 38.48 5.28L35.284 1.404Z" fill="#1D71B8"/>
+                </svg>
+            </h1>
+
+            {% include '@duplicare/components/paragraphs/wrapper.html.twig' with { 'paragraphs': person.paragraphs } %}
+        </div>
+    </div>
+</div>
+
+<section class="project-grid container-fluid wrap mb-20">
+	<div class="row">
+		<div class="col-xs-12">            
+            <h4 class="h4 text-tertiary mb-8">
+                {{ 'Lid van projecten'|trans }}
+            </h4>           
+
+			<div class="project-grid--inner project">
+				{% for key,  item in person.projects %}
+					{% include '@duplicare/components/teasers/project--teaser.html.twig' with { 'project': item } %}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</section>
+
+{% include '@duplicare/components/sections/wrapper.html.twig' with { 'sections': person.sections } %}

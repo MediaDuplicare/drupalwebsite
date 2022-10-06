@@ -1,0 +1,37 @@
+{{ drupal_entity('block', 'breadcrumbs') }}
+<div class="search-wrapper global container-fluid wrap pt-12 pb-46">
+	<div class="mb-10">
+		<h1 class="h1 text-tertiary mb-4">
+			{{display_title}}
+			<svg width="39" height="12" viewBox="0 0 39 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M35.284 1.404C33.788 3.036 31 5.552 27.736 5.552C24.472 5.552 22.228 4.124 20.188 3.24C18.012 2.356 15.564 0.792 11.756 0.792C7.132 0.792 3.188 3.716 0.944 6.708L3.936 10.72C5.704 8.748 8.424 6.572 11.688 6.572C14.952 6.572 17.196 8 19.236 8.884C21.48 9.768 23.996 11.332 27.804 11.332C32.292 11.332 36.304 8.544 38.48 5.28L35.284 1.404Z" fill="#E30613"/>
+			</svg>
+		</h1>
+        {% if header %}
+        <h6 class="h6 text-tertiary-700">{{ header }}</h6>
+        {% endif %}
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-md-3 mb-10">
+			<div class="filter bg-secondary-100 py-10 px-4 rounded-lg">
+				<h4 class="sidebar-title h4 text-tertiary mb-6">{{'Filters'|trans}}</h4>
+				<div class="menu-sidebar">
+					{{ exposed }}
+				</div>
+			</div>
+		</div>
+        <div class="col-xs-12 col-md-9">
+			<div class="flex items-start w-full mb-6">
+				{% include '@duplicare/components/search.html.twig' %}
+			</div>
+
+            {% if rows -%}
+                {{ rows }}
+            {% elseif empty -%}
+                {{ empty }}
+            {% endif %}
+
+            {{ pager }}
+        </div>
+	</div>
+</div>

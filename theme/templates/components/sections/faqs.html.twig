@@ -1,0 +1,29 @@
+<section class="paragraph paragraph--faqs mb-20 sm:mb-40">
+    <div class="container-fluid wrap">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8">
+                <h2 class="font-sofia text-2xl sm:text-6xl font-extrabold text-secondary mb-14">
+                    {{ section.title }}
+                    <span class="h4 text-primary">{{ section.subtitle }}</span>
+                </h2>
+                
+                {% for card in section.cards %}
+                    <div class="mb-4">
+                        {% include '@duplicare/components/card.html.twig' with { 'card': card } %}
+                    </div>
+                {% endfor %}
+            </div>
+
+            {% if section.form %}
+                <div class="col-xs-12 col-sm-4">
+                    <div class="bg-primary px-8 py-12 text-white">
+                        <h5 class="h5 text-white mb-2">{{ 'Geboeid?'|t }}</h5>
+                        <p class="paragraph text-white mb-8">{{ "Heb je 'm? Geboeid? Vul hieronder even je gegevens in en we sturen je wat meer info op over onze opleidingen."|t }}</p>
+                        
+                        {{ section.form }}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>

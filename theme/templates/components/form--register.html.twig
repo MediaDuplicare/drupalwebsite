@@ -1,0 +1,53 @@
+{# <form class="container-fluid wrap py-40">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            {% include '@ama/components/input--text.html.twig' with { 'form_item': registerform.elements.voornaam } %}
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            {% include '@ama/components/input--text.html.twig' with { 'form_item': registerform.elements.naam } %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            {% include '@ama/components/input--email.html.twig' with { 'form_item': registerform.elements.email } %}
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            {% include '@ama/components/input--text.html.twig' with { 'form_item': registerform.elements.telefonnummer } %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            {% include '@ama/components/input--text.html.twig' with { 'form_item': registerform.elements.bedrijfsnaam } %}
+        </div>
+        {% if registerform.elements.dropdown %}
+            <div class="col-xs-12 col-sm-6">
+                {% include '@ama/components/select.html.twig' with { 'form_item': registerform.dropdown } %}
+            </div>
+        {% endif %}
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12">
+            {% include '@ama/components/textarea.html.twig' with { 'form_item': registerform.elements.extra_informatie } %}
+        </div>
+    </div>
+
+    <button type="button" class="btn btn--tertiary mb-4">Upload bestanden</button>
+
+    {# {% include '@ama/components/input--checkbox.html.twig' with { 'input': 'Ik blijf graag op de hoogte van de laatste ontwikkelingen door de nieuwsbrief' } %}
+
+    {% include '@ama/components/input--checkbox.html.twig' with { 'input': 'Ik ga akkoord met de privacy policy' } %} #}
+{#
+<button type="submit" class="btn btn--primary has-icon-after">
+    Inschrijving versturen
+    <svg width="9" height="3" viewBox="0 0 9 3" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-6">
+        <path d="M7.812 0.156C7.532 0.492 6.986 1.038 6.3 1.038C5.642 1.038 5.194 0.73 4.774 0.562C4.326 0.366 3.836 0.0579998 3.066 0.0579998C2.086 0.0579998 1.274 0.674 0.784 1.346L1.47 2.242C1.82 1.822 2.366 1.36 3.038 1.36C3.71 1.36 4.158 1.668 4.578 1.836C5.026 2.032 5.558 2.34 6.328 2.34C7.266 2.34 8.092 1.752 8.568 1.01L7.812 0.156Z" fill="white"/>
+    </svg>
+</button>
+</form>
+#}
+
+{% if formParagraph.form is defined and formParagraph.form is not empty %}
+    <div class="newsletter-form">
+        {{ formParagraph.form }}
+    </div>
+{% endif %}

@@ -1,0 +1,20 @@
+{% include '@duplicare/components/sections/hero.html.twig' with { 'section': maritiem_leven.hero } %}
+
+<div class="container-fluid wrap mt-10">
+    <h2 class="h2 text-tertiary mb-2">
+        Introductie titel
+        <svg width="28" height="9" viewBox="0 0 28 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25.024 1.344C23.968 2.496 22 4.272 19.696 4.272C17.392 4.272 15.808 3.264 14.368 2.64C12.832 2.016 11.104 0.912 8.416 0.912C5.152 0.912 2.368 2.976 0.784 5.088L2.896 7.92C4.144 6.528 6.064 4.992 8.368 4.992C10.672 4.992 12.256 6 13.696 6.624C15.28 7.248 17.056 8.352 19.744 8.352C22.912 8.352 25.744 6.384 27.28 4.08L25.024 1.344Z" fill="#E30613"/>
+        </svg>
+    </h2>
+
+    {% include '@duplicare/components/paragraphs/text.html.twig' with { 'paragraph': maritiem_leven.intro_text } %}
+
+    {% include '@duplicare/components/paragraphs/col-text.html.twig' with { 'paragraph': maritiem_leven.col_text } %}
+
+    {% include '@duplicare/components/paragraphs/video.html.twig' with { 'paragraph': maritiem_leven.video } %}
+
+    {% include '@duplicare/components/paragraphs/slider.html.twig' with { 'paragraph': maritiem_leven.slider } %}
+</div>
+
+{% include '@duplicare/components/sections/wrapper.html.twig' with { 'sections': maritiem_leven.sections } %}

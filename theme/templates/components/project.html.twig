@@ -1,0 +1,6 @@
+<a class="project-item" href="/">
+	{% include '@duplicare/components/partials/tag.html.twig' with { 'tag': 'Tag' } %}
+	<img class="project-image" src="{{ projectgroup.image }}" alt="{{ projectgroup.image }}"/>
+	<h5 class="project-title">{{ projectgroup.title }}</h5>
+	<p class="project-desc paragraph">{{projectgroup.text}}</p>
+</a>

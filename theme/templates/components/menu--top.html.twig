@@ -1,0 +1,119 @@
+{#
+/**
+ * @file
+ * Theme override to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region <div>.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @see template_preprocess_region()
+ */
+#}
+{% set classes = [
+    'region',
+    'region--' ~ region|clean_class,
+    'bg-tertiary',
+    'text-secondary-100',
+    'py-2'
+] %}
+
+<section class="menu-top bg-tertiary py-2">
+    <div class="container-fluid wrap">
+        <div class="flex items-center justify-end">
+            <ul class="menu menu--top-nav flex items-center">
+                {% for item in top_nav.items %}
+                    <li class="menu-item mr-10 {{ item.children ? 'has-dropdown' : '' }}">
+                        {% if item.children %}
+                            <button type="button" class="js-toggle">
+                                {{ item.title }}
+                                <svg width="11" height="5" viewbox="0 0 11 5" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg" class="ml-2">
+                                    <path d="M10.0557 0.00089407C8.50137 0.00089407 7.69837 0.941985 7.05354 1.69749C6.46548 2.38709 6.00112 2.93166 5.05516 2.93166C4.1092 2.93166 3.64585 2.38709 3.05779 1.69749C2.41296 0.941985 1.60996 0.00089407 0.0556641 0.00089407V1.31923C1.00061 1.31923 1.46599 1.86381 2.05404 2.5534C2.69888 3.30992 3.50087 4.25 5.05516 4.25C6.60945 4.25 7.41245 3.30992 8.05729 2.5534C8.64534 1.86381 9.11072 1.31923 10.0557 1.31923V0.00089407Z"
+                                          fill="#E30613"/>
+                                </svg>
+                            </button>
+                            <ul class="menu dropdown">
+                                {% for child in item.children %}
+                                    <li class="menu-item">
+                                        <a href="{{ child.url }}">{{ child.title }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% else %}
+                            <a href="{{ item.url }}">
+                                {{ item.title }}
+                            </a>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+                {#
+                <li class="menu-item mr-10">
+                    <a href="#" class="flex items-center">
+                        <svg width="14" height="14" viewbox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+                             class="mr-2">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M4.66791 3.27778C4.66791 2.0198 5.68771 1 6.94569 1C8.20367 1 9.22347 2.0198 9.22347 3.27778C9.22347 4.53576 8.20367 5.55556 6.94569 5.55556C5.68771 5.55556 4.66791 4.53576 4.66791 3.27778ZM6.94569 0C5.13543 0 3.66791 1.46751 3.66791 3.27778C3.66791 5.08804 5.13543 6.55556 6.94569 6.55556C8.75596 6.55556 10.2235 5.08804 10.2235 3.27778C10.2235 1.46751 8.75596 0 6.94569 0ZM4.16791 8.33333C3.29859 8.33333 2.46488 8.67867 1.85018 9.29337C1.23547 9.90808 0.890137 10.7418 0.890137 11.6111V13C0.890137 13.2761 1.11399 13.5 1.39014 13.5C1.66628 13.5 1.89014 13.2761 1.89014 13V11.6111C1.89014 11.007 2.13012 10.4276 2.55728 10.0005C2.98445 9.57331 3.56381 9.33333 4.16791 9.33333H9.72347C10.3276 9.33333 10.9069 9.57331 11.3341 10.0005C11.7613 10.4276 12.0012 11.007 12.0012 11.6111V13C12.0012 13.2761 12.2251 13.5 12.5012 13.5C12.7774 13.5 13.0012 13.2761 13.0012 13V11.6111C13.0012 10.7418 12.6559 9.90807 12.0412 9.29337C11.4265 8.67867 10.5928 8.33333 9.72347 8.33333H4.16791Z"
+                                  fill="white"/>
+                        </svg>
+                        Inloggen
+                    </a>
+                </li>
+                #}
+            </ul>
+            {% set site_url = url('<current>') %}
+
+            {#
+            <div class="language-switcher">
+                <button type="button" class="language-switcher__button js-toggle">
+                    {% if '/nl' in site_url['#markup'] %}
+                        NL
+                    {% elseif '/fr' in site_url['#markup'] %}
+                        FR
+                    {% elseif '/en' in site_url['#markup'] %}
+                        EN
+                    {% endif %}
+                    <svg width="11" height="5" viewbox="0 0 11 5" fill="none" xmlns="http://www.w3.org/2000/svg"
+                         class="ml-2">
+                        <path d="M10.0557 0.00089407C8.50137 0.00089407 7.69837 0.941985 7.05354 1.69749C6.46548 2.38709 6.00112 2.93166 5.05516 2.93166C4.1092 2.93166 3.64585 2.38709 3.05779 1.69749C2.41296 0.941985 1.60996 0.00089407 0.0556641 0.00089407V1.31923C1.00061 1.31923 1.46599 1.86381 2.05404 2.5534C2.69888 3.30992 3.50087 4.25 5.05516 4.25C6.60945 4.25 7.41245 3.30992 8.05729 2.5534C8.64534 1.86381 9.11072 1.31923 10.0557 1.31923V0.00089407Z"
+                              fill="#E30613"/>
+                    </svg>
+                </button>
+                <ul class="language-switcher__dropdown">
+                    <li class="mb-2">
+                        {% if '/fr' in site_url['#markup'] %}
+                            <a href="{{ site_url['#markup']|replace({'/fr': '/nl'}) }}" class="block">NL</a>
+                        {% elseif '/en' in site_url['#markup'] %}
+                            <a href="{{ site_url['#markup']|replace({'/en': '/nl'}) }}" class="block">NL</a>
+                            {% else %}
+                                <a href="#" class="block">NL</a>
+                        {% endif %}
+                    </li>
+                    <li class="mb-2">
+                        {% if '/fr' in site_url['#markup'] %}
+                            <a href="{{ site_url['#markup']|replace({'/fr': '/en'}) }}" class="block">EN</a>
+                        {% elseif '/nl' in site_url['#markup'] %}
+                            <a href="{{ site_url['#markup']|replace({'/nl': '/en'}) }}" class="block">EN</a>
+                            {% else %}
+                                <a href="#" class="block">EN</a>
+                        {% endif %}
+                    </li>
+                    <li>
+                        {% if '/nl' in site_url['#markup'] %}
+                            <a href="{{ site_url['#markup']|replace({'/nl': '/fr'}) }}" class="block">FR</a>
+                        {% elseif '/en' in site_url['#markup'] %}
+                            <a href="{{ site_url['#markup']|replace({'/en': '/fr'}) }}" class="block">FR</a>
+                            {% else %}
+                                <a href="#" class="block">FR</a>
+                        {% endif %}
+                    </li>
+                </ul>
+            </div>
+            #}
+            {# Language switcher #}
+            {{ drupal_block('language_block:language_interface', wrapper=false) }}
+        </div>
+    </div>
+</section>

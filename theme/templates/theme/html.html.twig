@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+  <head>
+    <head-placeholder token="{{ placeholder_token }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
+    <meta name="description" content="Antwerp Maritime Academy is een internationale topschool in het hart van de Europese maritieme hoofdstad: Antwerpen. We zijn al meer dan tweehonderd jaar dé Belgische referentie voor opleidingen richting de maritieme sector. En zijn vandaag in een steeds verder geglobaliseerde wereld relevanter dan ooit. Bij ons vind je moderne en toekomstgerichte opleidingen die je voorbereiden op een carrière in de stuurhut van onze maatschappij – aan boord van een schip of aan de wal.">
+
+    <css-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '421786779705340');
+      fbq('track', 'PageView');
+    </script>   
+    <!-- End Facebook Pixel Code -->
+
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MZXQFJJ');</script>
+    <!-- End Google Tag Manager -->
+      </head>
+  <body{{ attributes }}>
+
+  <noscript>
+    <img height="1" width="1" src="https://www.facebook.com/tr?id=421786779705340&ev=PageView&noscript=1"/>
+  </noscript>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZXQFJJ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="wrapper">
+      {% if only_page is not defined  %}
+          {{ page_top }}
+      {% endif %}
+      {{ page }}
+      {% if only_page is not defined  %}
+          {{ page_bottom }}
+      {% endif %}
+  </div>
+
+    <js-bottom-placeholder token="{{ placeholder_token }}">
+  </body>
+</html>

@@ -1,0 +1,82 @@
+maritiem_leven:
+  hero:
+    title: Ontdek het maritieme leven
+    description: Metus ultrices varius faucibus nec facilisi massa eget donec phasellus. Urna egestas porta pellentesque dui, enim risus magnis fermentum. Mauris accumsan, proin ut diam. Mi mauris eget molestie sit vulputate cras. Orci varius et adipiscing ultricies malesuada morbi.
+    image:
+      src: /themes/custom/ama/src/images/placeholders/unsplash_XdIrwH98K_E.png
+      alt: Maritiem leven hero
+  intro_text: Amet, duis varius id aliquam dui, proin venenatis ipsum amet. Congue ultrices in pellentesque lacus etiam rutrum cras porttitor diam. Erat lacus, at pellentesque nec sollicitudin odio donec integer cursus. Nisi accumsan vitae fames pharetra suspendisse ut blandit augue malesuada. Egestas commodo ultricies sed volutpat. Et blandit venenatis scelerisque orci sed blandit. Semper vitae, tempus adipiscing mi placerat ultrices ut sagittis. Et in tristique sed justo morbi porttitor. Sed magna sed sed orci suspendisse lobortis ut vestibulum.
+  col_text: Et ut est dictum mi, diam. Sed pellentesque montes, fermentum vitae mauris tellus quis ac. Ut magna tellus pellentesque sagittis urna, 
+        varius viverra. Placerat quis non eu tincidunt mauris, mi faucibus viverra pretium. Urna in nisl adipiscing augue cras magna malesuada. 
+        Purus pretium nunc pellentesque nulla. Imperdiet in vitae, scelerisque egestas. Morbi dui, facilisis ullamcorper lacus ac. Nisl, feugiat 
+        id vulputate nulla luctus vitae lobortis ut leo. In non cursus consequat nunc amet. Fermentum pharetra diam sed bibendum aliquet id lectus 
+        ac aliquam. Hac massa risus tristique in eget cras. Dictum dictum scelerisque tempor nec sem gravida a. Tellus facilisis viverra viverra 
+        enim donec feugiat habitant. In felis amet eget mi ipsum eu. Malesuada sit suspendisse nisi nunc. Ac libero integer nisl eget tellus 
+        integer nunc. Nulla metus suscipit ut eget vestibulum rutrum. Pulvinar odio tempus hendrerit aliquam magna faucibus amet ipsum diam. Sed 
+        eu volutpat sit in scelerisque posuere nunc id. Urna, posuere integer in at ullamcorper lacus cras. Sem ut mi, rhoncus nec pretium. Commodo 
+        volutpat sit facilisi urna, ornare. Malesuada nibh tempus tempor amet sed sed tristique eget. Egestas eleifend at nam vitae ultricies
+        nisl est at et lectus urna, id enim ac. Diam diam sodales donec quam. Augue volutpat mi ac eu turpis dignissim amet dignissim porttitor. 
+        Mauris tempus tempus sem nibh leo amet. Magna convallis amet cum ut nibh a ornare. Tortor molestie varius nec massa auctor morbi vitae 
+        dignissim. Donec condimentum vel porttitor sapien enim lectus viverra a. Quis vulputate donec congue nulla morbi integer eget. Dui lacus, 
+        blandit vestibulum odio sed volutpat convallis consectetur. Bibendum sed fermentum blandit eu nibh. Vulputate molestie gravida diam 
+        hendrerit amet. Lacus, hendrerit cursus massa at. Facilisis dui eu vitae, faucibus at. Vehicula est eget facilisi purus congue diam. 
+        Tellus libero amet, ultricies erat. Viverra in sed aliquam euismod sollicitudin imperdiet donec vulputate id. Ultrices at lacus ipsum tortor 
+        odio massa. Sed amet integer id pretium. Mauris arcu amet a sollicitudin molestie rhoncus. Eget nunc massa dui diam integer praesent lectus 
+        facilisis nisl. Egestas congue in lectus integer feugiat convallis. Libero nunc dignissim donec enim blandit leo, posuere. Accumsan egestas 
+        velit facilisis arcu.
+  video:
+    src: https://www.youtube.com/embed/tgbNymZ7vqY
+    caption: Vel platea integer ipsum sed amet quis. Semper fringilla morbi purus nunc aliquam. Rhoncus urna pellentesque turpis ultrices at ipsum.
+  slider:
+    - image:
+        src: /themes/custom/ama/src/images/placeholders/unsplash_61XaXohAlZ4.png
+        alt: ""
+      caption: Adipiscing aliquet lobortis ipsum dui montes, eget. Urna molestie habitasse imperdiet sed id suspendisse. Rhoncus aenean sit volutpat enim ultrices nullam a ut.
+    - image:
+        src: /themes/custom/ama/src/images/placeholders/unsplash_AP-OWtqJJeE.png
+        alt: ""
+      caption: Adipiscing aliquet lobortis ipsum dui montes, eget. Urna molestie habitasse imperdiet sed id suspendisse. Rhoncus aenean sit volutpat enim ultrices nullam a ut.
+    - image:
+        src: /themes/custom/ama/src/images/placeholders/unsplash_KOzMQsjut6U.png
+        alt: ""
+      caption: Adipiscing aliquet lobortis ipsum dui montes, eget. Urna molestie habitasse imperdiet sed id suspendisse. Rhoncus aenean sit volutpat enim ultrices nullam a ut.
+  sections:
+    - type: testimonial
+      value:
+        title: Bring it to life titel
+        description: Malesuada ac vel massa et placerat fringilla lectus phasellus dignissim. Adipiscing pulvinar lectus mauris sit eros convallis maecenas fames ultrices. Congue massa lacus semper platea eu libero gravida. Tempor ut amet duis neque, egestas pellentesque. Quam hendrerit neque magna urna, tincidunt feugiat egestas id. Lectus condimentum integer ultrices tristique sed arcu, donec sed. Tortor duis sollicitudin congue tempus. Viverra egestas malesuada sit arcu amet, nunc lacus.
+        author: Naam student
+        image:
+          src: /themes/custom/ama/src/images/placeholders/author.png
+          alt: Avatar
+        education: naam opleiding
+        cta:
+          text: Lees meer verhalen
+          url: "#"
+    - type: educations
+      value:
+        title: Opleidingen titel
+        educations:
+          - title: Nautische wetenschappen
+            description: Morbi eu lacus sed nec egestas. Lectus lectus ornare integer at eget massa pretium proin.
+            image:
+              src: /themes/custom/ama/src/images/placeholders/marc.png
+              alt: Picture of Marc
+            node_url: "#"
+          - title: Scheepwerktuig-kunde
+            description: Morbi eu lacus sed nec egestas. Lectus lectus ornare integer at eget massa pretium proin.
+            node_url: "#"
+          - title: Hydrography masteropleiding
+            description: Morbi eu lacus sed nec egestas. Lectus lectus ornare integer at eget massa pretium proin.
+            node_url: "#"
+    - type: logos
+      value:
+        logos:
+          - src: /themes/custom/ama/src/images/logos/logo_1.png
+            alt: logo 1
+          - src: /themes/custom/ama/src/images/logos/logo_2.png
+            alt: logo 2
+          - src: /themes/custom/ama/src/images/logos/logo_3.png
+            alt: logo 3
+          - src: /themes/custom/ama/src/images/logos/logo_4.png
+            alt: logo 4

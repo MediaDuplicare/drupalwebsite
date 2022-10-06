@@ -1,0 +1,60 @@
+homepage:
+  hero:
+    title: Jij een toekomstige CEO of ingenieur?
+    description: Egestas amet, arcu neque, nulla porttitor integer et viverra. Urna faucibus vestibulum, odio aliquet dui rhoncus arcu, tellus.
+    subTitle: Onze opleidingen
+    image:
+      src: /themes/custom/ama/src/images/placeholders/unsplash_XdIrwH98K_E.png
+      alt: Hero image
+  educations:
+    title: De beste maritieme opleiding van België
+    description: Egestas amet, arcu neque, nulla porttitor integer et viverra. Urna faucibus vestibulum, odio aliquet dui rhoncus arcu, tellus. Euismod in nullam ut arcu, urna. Rutrum pellentesque non pretium faucibus morbi malesuada. Suspendisse consequat egestas dolor turpis enim. Lectus vestibulum mi venenatis elementum ornare.
+  testimonial:
+    title: Bring it to life titel
+    description: Malesuada ac vel massa et placerat fringilla lectus phasellus dignissim. Adipiscing pulvinar lectus mauris sit eros convallis maecenas fames ultrices. Congue massa lacus semper platea eu libero gravida. Tempor ut amet duis neque, egestas pellentesque. Quam hendrerit neque magna urna, tincidunt feugiat egestas id. Lectus condimentum integer ultrices tristique sed arcu, donec sed. Tortor duis sollicitudin congue tempus. Viverra egestas malesuada sit arcu amet, nunc lacus.
+    author:
+      avatar:
+        src: /themes/custom/ama/src/images/placeholders/author.png
+        alt: Avatar
+      name: Naam student
+      education: naam opleiding
+  news:
+    title: AMA nieuws
+    subtitle: Laatste nieuws vanaf de campus
+    description: Pellentesque amet congue molestie nulla faucibus. Augue duis dui vitae purus erat porttitor condimentum tortor. A egestas cum massa massa commodo hendrerit scelerisque interdum. Integer tincidunt lectus senectus sit.
+    newsItems:
+      - title: Mi, viverra adipiscing ornare nunc
+        description: null
+        created: 22.10.21
+        image:
+          src: /themes/custom/ama/src/images/placeholders/unsplash_SInhLTQouEk.png
+          alt: Image alt
+        category: Tag
+      - title: Mi, viverra adipiscing ornare nunc
+        description: null
+        created: 22.10.21
+        image:
+          src: /themes/custom/ama/src/images/placeholders/unsplash_SInhLTQouEk.png
+          alt: Image alt
+        category: Tag
+      - title: Feugiat scelerisque eu fringilla non mattis dolor nulla non hendrerit
+        description: Cras viverra ultrices nibh tortor tincidunt et mi. Quisque quam bibendum vestibulum velit eleifend convallis risus. Vulputate tristique nulla elit etiam montes. Pellentesque adipiscing urna ipsum volutpat.
+        created: 22.10.21
+        image:
+          src: /themes/custom/ama/src/images/placeholders/unsplash_SInhLTQouEk.png
+          alt: Image alt
+        category: Tag
+      - title: Mi, viverra adipiscing ornare nunc
+        description: null
+        created: 22.10.21
+        image:
+          src: /themes/custom/ama/src/images/placeholders/unsplash_SInhLTQouEk.png
+          alt: Image alt
+        category: Tag
+      - title: Mi, viverra adipiscing ornare nunc
+        description: null
+        created: 22.10.21
+        image:
+          src: /themes/custom/ama/src/images/placeholders/unsplash_SInhLTQouEk.png
+          alt: Image alt
+        category: Tag

@@ -1,0 +1,63 @@
+{% include '@duplicare/components/sections/hero.html.twig' with { 'section': project.hero } %}
+
+<div class="container-fluid wrap">
+    <div class="row">
+        <div class="col-xs-12 col-sm-9">
+            {% include '@duplicare/components/paragraphs/wrapper.html.twig' with { 'paragraphs': project.paragraphs, 'container': false } %}
+        </div>
+
+        <div class="col-xs-12 col-sm-3">
+            <div class="bg-tertiary px-8 py-12 rounded-lg mb-4">
+                <h5 class="h5 text-white mb-2">{{ 'Onderzoekers'|t }}</h5>
+                <div class="flex items-center mb-4">
+                    <img src="/themes/custom/ama/src/images/placeholders/recruiter.png" class="h-50 w-50 rounded-full mr-2" />
+                    <div>
+                        <h6 class="font-sofia text-sm font-bold text-tertiary">Naam onderzoeker ~ </h6>
+                        <p class="font-sofia text-xs text-tertiary-700">Functie</p>
+                    </div>
+                </div>
+                <div class="flex items-center mb-4">
+                    <img src="/themes/custom/ama/src/images/placeholders/recruiter.png" class="h-50 w-50 rounded-full mr-2" />
+                    <div>
+                        <h6 class="font-sofia text-sm font-bold text-tertiary">Naam onderzoeker ~ </h6>
+                        <p class="font-sofia text-xs text-tertiary-700">Functie</p>
+                    </div>
+                </div>
+                <div class="flex items-center mb-4">
+                    <img src="/themes/custom/ama/src/images/placeholders/recruiter.png" class="h-50 w-50 rounded-full mr-2" />
+                    <div>
+                        <h6 class="font-sofia text-sm font-bold text-tertiary">Naam onderzoeker ~ </h6>
+                        <p class="font-sofia text-xs text-tertiary-700">Functie</p>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <img src="/themes/custom/ama/src/images/placeholders/recruiter.png" class="h-50 w-50 rounded-full mr-2" />
+                    <div>
+                        <h6 class="font-sofia text-sm font-bold text-tertiary">Naam onderzoeker ~ </h6>
+                        <p class="font-sofia text-xs text-tertiary-700">Functie</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-secondary-100 rounded-lg px-8 py-12">
+                <h5 class="h5 text-tertiary mb-4">{{ 'Contact informatie'|t }}</h5>
+                <p class="font-sofia text-sm text-tertiary-700 mb-2">Noordkasteel Oost 6 2030 Antwerpen</p>
+                <div class="flex items-center">
+                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.9173 8.66503V10.29C11.9179 10.4409 11.887 10.5902 11.8265 10.7284C11.7661 10.8667 11.6775 10.9907 11.5663 11.0927C11.4551 11.1947 11.3239 11.2723 11.181 11.3207C11.0381 11.369 10.8867 11.3869 10.7364 11.3734C9.06963 11.1923 7.46855 10.6227 6.06184 9.71045C4.75308 8.87881 3.64349 7.76921 2.81184 6.46045C1.89642 5.04735 1.32673 3.43849 1.14893 1.7642C1.13539 1.61441 1.15319 1.46344 1.2012 1.32091C1.2492 1.17838 1.32636 1.04741 1.42776 0.936327C1.52916 0.825248 1.65257 0.7365 1.79015 0.675732C1.92772 0.614963 2.07645 0.583507 2.22684 0.583366H3.85184C4.11472 0.580778 4.36957 0.673866 4.56888 0.845279C4.7682 1.01669 4.89839 1.25473 4.93518 1.51503C5.00377 2.03507 5.13096 2.54568 5.31434 3.03712C5.38722 3.23099 5.403 3.44169 5.35979 3.64426C5.31659 3.84682 5.21623 4.03276 5.07059 4.18003L4.38268 4.86795C5.15377 6.22404 6.27659 7.34686 7.63268 8.11795L8.32059 7.43003C8.46787 7.2844 8.6538 7.18403 8.85637 7.14083C9.05893 7.09763 9.26964 7.1134 9.46351 7.18628C9.95495 7.36966 10.4656 7.49686 10.9856 7.56545C11.2487 7.60257 11.489 7.7351 11.6608 7.93784C11.8326 8.14058 11.9239 8.39939 11.9173 8.66503Z" stroke="#E30613" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <p class="font-sofia text-sm text-tertiary-700 mb-2 ml-2">+32 (0)3 205 64 30</p>
+                </div>
+                <div class="flex items-center">
+                    <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.16536 2.66669H10.832C11.4279 2.66669 11.9154 3.15419 11.9154 3.75002V10.25C11.9154 10.8459 11.4279 11.3334 10.832 11.3334H2.16536C1.56953 11.3334 1.08203 10.8459 1.08203 10.25V3.75002C1.08203 3.15419 1.56953 2.66669 2.16536 2.66669Z" stroke="#E30613" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M11.9154 3.75L6.4987 7.54167L1.08203 3.75" stroke="#E30613" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <p class="font-sofia text-sm text-tertiary-700 ml-2">info@hzs.be</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include '@duplicare/components/sections/wrapper.html.twig' with { 'sections': project.sections } %}

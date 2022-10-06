@@ -1,0 +1,6 @@
+<article class="bg-white border-1 border-solid border-secondary-300 p-8 mb-4">
+    <span class="inline-block font-sofia text-sm font-bold text-secondary py-1 px-2 rounded bg-secondary-100 mb-4">{{ article.type|t|raw }}</span>
+    <h5 class="h5 text-tertiary mb-4">{{ article.title }}</h5>
+    <p class="paragraph text-tertiary-700 mb-6">{{ article.description }}</p>
+    <a href="{{ article.url }}" class="font-sofia text-base font-extrabold text-primary">{{'Read more'| trans}}</a>
+</article>

@@ -1,0 +1,26 @@
+searchpage:
+  title: Zoekresultaten
+  description: Metus ultrices varius faucibus nec facilisi massa eget donec phasellus. Urna egestas porta pellentesque dui, enim risus magnis fermentum. Mauris accumsan, proin ut diam. Mi mauris eget molestie sit vulputate cras. Orci varius et adipiscing ultricies malesuada morbi.
+  filters:
+    - Opleidingen
+    - Studenten
+    - Research
+    - Checkbox label
+    - Checkbox label
+  results:
+    - title: Titel pagina
+      description: Amet, duis varius id aliquam dui, proin venenatis ipsum amet. Congue ultrices in pellentesque lacus etiam rutrum cras porttitor diam. Erat lacus, at pellentesque nec sollicitudin odio donec integer cursus.
+      category: Type pagina
+      node_url: "#"
+    - title: Titel pagina
+      description: Amet, duis varius id aliquam dui, proin venenatis ipsum amet. Congue ultrices in pellentesque lacus etiam rutrum cras porttitor diam. Erat lacus, at pellentesque nec sollicitudin odio donec integer cursus.
+      category: Type pagina
+      node_url: "#"
+    - title: Titel pagina
+      description: Amet, duis varius id aliquam dui, proin venenatis ipsum amet. Congue ultrices in pellentesque lacus etiam rutrum cras porttitor diam. Erat lacus, at pellentesque nec sollicitudin odio donec integer cursus.
+      category: Type pagina
+      node_url: "#"
+    - title: Titel pagina
+      description: Amet, duis varius id aliquam dui, proin venenatis ipsum amet. Congue ultrices in pellentesque lacus etiam rutrum cras porttitor diam. Erat lacus, at pellentesque nec sollicitudin odio donec integer cursus.
+      category: Type pagina
+      node_url: "#"

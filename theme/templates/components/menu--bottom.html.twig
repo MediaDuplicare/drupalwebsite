@@ -1,0 +1,10 @@
+<div class="flex flex-col py-4 pb-14 sm:flex-row sm:items-center sm:pb-4">
+			<ul class="menu menu--authorship flex flex-col sm:flex-row sm:items-center">
+               {% for item in menu.items %}
+                    <li class="menu-item mb-2 sm:mr-6 sm:mb-0">
+                        <a href="{{item.url}}">{{item.title}}</a>
+                    </li>
+                {% endfor %}
+			</ul>
+			<small class="font-sofia text-xs text-secondary-300">&copy; {{'Antwerp Martime Academy'| trans }}</small>
+		</div>

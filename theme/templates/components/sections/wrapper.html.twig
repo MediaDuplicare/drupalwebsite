@@ -1,0 +1,41 @@
+{% for section in sections %}
+    {% if section.type == 'news' %}
+        {% include '@duplicare/components/sections/news.html.twig' with { 'section': section.value } %}
+    {% endif %}
+
+    {% if section.type == 'testimonial' %}
+        {% include '@duplicare/components/sections/testimonial.html.twig' with { 'section': section.value } %}
+    {% endif %}
+
+    {% if section.type == 'tabs' %}
+        {% include '@duplicare/components/sections/tabs.html.twig' with { 'section': section.value } %}
+    {% endif %}
+
+    {% if section.type == 'logos' %}
+        {% include '@duplicare/components/sections/logos.html.twig' with { 'section': section.value } %}
+    {% endif %}
+
+     {% if section.type == 'text_and_cards' %}
+        {% include '@duplicare/components/sections/text-cards.html.twig' with { 'section': section.value } %}
+    {% endif %}
+
+    {% if section.type == 'slider' %}
+        {% include '@duplicare/components/sections/slider.html.twig' with { 'section': section.value } %}
+    {% endif %}
+
+    {% if section.type == 'clickable_blocks' %}
+        {% include '@duplicare/components/sections/clickable-blocks.html.twig' with { 'section': section.value } %}
+    {% endif %}
+
+    {% if section.type == 'faqs' %}
+        {% include '@duplicare/components/sections/faqs.html.twig' with { 'section': section.value } %}
+    {% endif %}
+
+    {% if section.type == 'grid' %}
+        {% include '@duplicare/components/sections/grid.html.twig' with { 'section': section.value } %}
+    {% endif %}
+
+    {% if section.type == 'researchers' %}
+        {% include '@duplicare/components/sections/researchers.html.twig' with { 'section': section.value } %}
+    {% endif %}
+{% endfor %}

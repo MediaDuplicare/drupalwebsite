@@ -1,0 +1,10 @@
+<div class="col-xs-12 col-sm-3 mb-8 sm:mb-0">    
+    <h5 class="footer-title mb-4">{{menu.title}}</h5>
+    <ul class="menu flex flex-col">
+        {% for item in menu.items %}
+            <li class="menu-item mb-2.5">
+                <a href="{{item.url}}" class="footer-text">{{item.title}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

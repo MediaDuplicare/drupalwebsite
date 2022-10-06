@@ -1,0 +1,39 @@
+<div class="breadcrumb-wrapper hero--align">
+    {{ drupal_entity('block', 'breadcrumbs') }}
+</div>
+{% include '@duplicare/components/sections/hero.html.twig' with { 'section': page.hero } %}
+
+{% if page.sidebar or page.siderbar_right %}
+    <div class="container-fluid wrap">
+        <div class="row">
+            {% if not page.siderbar_right and page.sidebar.menu.links %}
+                <div class="col-xs-12 col-sm-3" role="complementary">
+                    {% include '@duplicare/components/menu--sidebar.html.twig' with { 'section': page.sidebar.menu.links , 'data': page.sidebar } %}
+                </div>
+            {% endif %}
+
+            <div class="col-xs-12 col-sm-9">
+                {% include '@duplicare/components/paragraphs/wrapper.html.twig' with { 'paragraphs': page.paragraphs } %}
+            </div>
+
+            {% if page.siderbar_right %}
+                <div class="col-xs-12 col-sm-3" role="complementary">
+                    {% include '@duplicare/components/paragraphs/wrapper.html.twig' with { 'paragraphs': page.siderbar_right } %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endif %}
+
+{% if page.sidebar is empty and page.siderbar_right is empty %}
+    <div class="container-fluid wrap">
+        <div class="row slider-row-reset">
+            <div class="col-xs-12 col-sm-12">
+                {% include '@duplicare/components/paragraphs/wrapper.html.twig' with { 'paragraphs': page.paragraphs } %}
+            </div>
+        </div>
+    </div>
+{% endif %}
+
+
+{% include '@duplicare/components/sections/wrapper.html.twig' with { 'sections': page.sections } %}

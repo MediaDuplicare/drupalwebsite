@@ -1,0 +1,25 @@
+<a href="{{ block.link.url }}" {{ block.nTab }} class="card {% if block.image %}--bg-img{% endif %} bg-white hover:bg-secondary-100 p-8 rounded-lg no-underline border-1 border-solid border-secondary-300">
+    <article class="flex flex-col flex-1 h-full">
+        <h5 class="h5 text-tertiary mb-4{% if not block.description %} flex-1{% endif %}">{{ block.title }}</h5>
+
+        {% if block.description %}
+        <p class="paragraph text-tertiary-700 flex-1 mb-10">{{ block.description }}</p>
+        {% endif %}
+
+        <p class="font-sofia text-sm font-bold text-primary no-underline flex items-center">
+            {% if block.link.text %}
+                {{ block.link.text }}
+            {% else %}
+                {{ "Ga verder"|trans }}
+            {% endif %}
+
+            <svg width="9" height="3" viewBox="0 0 9 3" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-6">
+                <path d="M7.812 0.156C7.532 0.492 6.986 1.038 6.3 1.038C5.642 1.038 5.194 0.73 4.774 0.562C4.326 0.366 3.836 0.0579998 3.066 0.0579998C2.086 0.0579998 1.274 0.674 0.784 1.346L1.47 2.242C1.82 1.822 2.366 1.36 3.038 1.36C3.71 1.36 4.158 1.668 4.578 1.836C5.026 2.032 5.558 2.34 6.328 2.34C7.266 2.34 8.092 1.752 8.568 1.01L7.812 0.156Z" fill="#e30613"/>
+            </svg>
+        </p>
+        {% if block.image %}
+            <img src="{{ block.image.src }}" alt="{{ block.image.alt }}"
+                 class="card__bg"/>
+        {% endif %}
+    </article>
+</a>

@@ -1,0 +1,25 @@
+{% set grid_classes = [
+    'grid',
+    'grid-cols-1',
+    'grid-fill-height',
+    section.blocks|length > 2 ? 'sm:grid-cols-3': 'sm:grid-cols-2',
+    'gap-6'
+] %}
+<section class="paragraph paragraph--clickable-blocks mb-20 sm:mb-40">
+    <div class="container-fluid wrap">
+        <div class="row">
+            {% if section.title %}
+                <div class="col-xs-12">
+                    <h4 class="h4 text-tertiary text-center mb-10">{{ section.title }}</h4>
+                </div>
+            {% endif %}
+            <div class="col-xs-12">
+                <div{{ content_attributes.addClass(grid_classes) }}>
+                    {% for cblock in section.blocks %}
+                        {% include '@duplicare/components/clickable-block.html.twig' with { 'block': cblock } %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

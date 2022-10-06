@@ -1,0 +1,19 @@
+projects:
+  - title: "Titel project"
+    description: "Cras viverra ultrices nibh tortor tincidunt et mi. Quisque quam bibendum vestibulum velit eleifend convallis risus."
+    category: "Tag"
+    image:
+      src: "/themes/custom/ama/src/images/placeholders/unsplash_y8TMoCzw87E_1.png"
+      alt: "Project image alt"
+  - title: "Titel project"
+    description: "Cras viverra ultrices nibh tortor tincidunt et mi. Quisque quam bibendum vestibulum velit eleifend convallis risus."
+    category: "Tag"
+    image:
+      src: "/themes/custom/ama/src/images/placeholders/unsplash_y8TMoCzw87E_2.png"
+      alt: "Project image alt"
+  - title: "Titel project"
+    description: "Cras viverra ultrices nibh tortor tincidunt et mi. Quisque quam bibendum vestibulum velit eleifend convallis risus."
+    category: "Tag"
+    image:
+      src: "/themes/custom/ama/src/images/placeholders/unsplash_y8TMoCzw87E_3.png"
+      alt: "Project image alt"

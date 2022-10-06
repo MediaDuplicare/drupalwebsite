@@ -1,0 +1,7 @@
+<div class="row flex-col flex-nowrap sm:flex-wrap sm:items-center sm:max-h-180 sm:mb-8">
+    {% for key, article in articles %}
+        <div class="col-xs-12 {{ key != 2 ? 'col-sm-3' : 'col-sm-6 large' }} w-full mb-10">
+            {% include '@duplicare/components/teasers/article--teaser.html.twig' with { 'article': article, 'large': key == 2 } %}
+        </div>
+    {% endfor %}
+</div>

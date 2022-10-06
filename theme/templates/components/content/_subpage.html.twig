@@ -1,0 +1,38 @@
+{% if subpage.menu %}
+    {% include '@duplicare/components/submenu.html.twig' with { 'section': subpage.menu } %}
+{% endif %}
+
+<div class="breadcrumb-wrapper hero--align">
+    {{ drupal_entity('block', 'breadcrumbs') }}
+</div>
+
+{% include '@duplicare/components/sections/hero.html.twig' with { 'section': subpage.hero } %}
+
+<div class="container-fluid wrap">
+    <div class="row">
+        {% if subpage.hide_sidebar != true %}
+            {% if subpage.sidebar and (subpage.sidebar.menu.links or subpage.sidebar.type == 'modules')%}
+                <div class="col-xs-12 col-md-3">
+                    {% if subpage.sidebar.type == 'modules' %}
+                        {% include '@duplicare/components/menu--sidebar--modules.html.twig' with { 'section': subpage.sidebar.menu , 'data' : subpage.sidebar } %}
+                    {% else %}
+                        {% include '@duplicare/components/menu--sidebar.html.twig' with { 'section': subpage.sidebar.menu.links, 'data' : subpage.sidebar } %}
+                    {% endif %}
+                </div>
+            {% endif %}
+        {% endif %}
+
+        <div class="col-xs-12 col-md-9">
+            {% include '@duplicare/components/paragraphs/wrapper.html.twig' with { 'paragraphs': subpage.paragraphs } %}
+            {% if subpage.sidebar.type == 'modules' %}
+                {% for key, module in subpage.sidebar.menu %}
+                    <div id="{{ module.link.text }}" class="tab-content {{ key != 0 ? 'hidden' : '' }}">
+                        {% include '@duplicare/components/paragraphs/wrapper.html.twig' with { 'paragraphs': module.content } %}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% include '@duplicare/components/sections/wrapper.html.twig' with { 'sections': subpage.sections } %}

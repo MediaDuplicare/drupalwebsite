@@ -1,0 +1,10 @@
+<a class="project-item" href="{{ researchGroup.url }}">
+	{% if researchGroup.tag %}
+		{% include '@duplicare/components/partials/tag.html.twig' with { 'tag': researchGroup.tag } %}
+	{% endif %}
+	<img class="project-image" src="{{researchGroup.image.src}}" alt="{{ researchGroup.image.alt }}"/>
+	<h5 class="project-title">{{ researchGroup.title }}</h5>
+	{% if researchGroup.description %}
+		<p class="project-desc paragraph">{{researchGroup.description}}</p>
+	{% endif %}
+</a>

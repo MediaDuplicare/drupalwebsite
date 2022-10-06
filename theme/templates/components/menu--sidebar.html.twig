@@ -1,0 +1,10 @@
+<div class="menu-sidebar-wrapper">
+    <h6 class="sidebar-title">{{ data.title ? data.title : '' }}</h6>
+    <ul class="menu menu-sidebar">
+        {% for item in section %}
+            <li class="menu-item {% if item.isActive %}is-active{% endif %}">
+                <a href="{{ item.link.url }}">{{ item.link.text }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

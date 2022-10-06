@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ *
+ * @ingroup themeable
+ */
+#}
+{% if breadcrumb and breadcrumb[0].text != 'Home' and breadcrumb[0].text != 'Accueil' %}
+    <nav class="mt-4 mb-12" aria-label="breadcrumb">
+        <ol class="breadcrumb flex flex-wrap items-center container-fluid wrap">
+            <li class="breadcrumb-item mr-4">
+                <a href="{{ path('<front>') }}">{{ 'Home'|trans }}
+                    <svg width="9" height="3" viewbox="0 0 9 3" fill="#17364b" xmlns="http://www.w3.org/2000/svg" class="ml-4">
+                        <path d="M7.812 0.156C7.532 0.492 6.986 1.038 6.3 1.038C5.642 1.038 5.194 0.73 4.774 0.562C4.326 0.366 3.836 0.0579998 3.066 0.0579998C2.086 0.0579998 1.274 0.674 0.784 1.346L1.47 2.242C1.82 1.822 2.366 1.36 3.038 1.36C3.71 1.36 4.158 1.668 4.578 1.836C5.026 2.032 5.558 2.34 6.328 2.34C7.266 2.34 8.092 1.752 8.568 1.01L7.812 0.156Z" fill="white"/>
+                    </svg></a>
+            </li>
+            {% for item in breadcrumb %}
+                {% if loop.last %}
+                    <li class="breadcrumb-item active" aria-current="page">{{ item.text }}</li>
+                    {% else %}
+                        <li class="breadcrumb-item mr-4">
+                            {% if item.url %}
+                                <a href="{{ item.url }}">{{ item.text }}
+                                    <svg width="9" height="3" viewbox="0 0 9 3" fill="#17364b" xmlns="http://www.w3.org/2000/svg" class="ml-4">
+                                        <path d="M7.812 0.156C7.532 0.492 6.986 1.038 6.3 1.038C5.642 1.038 5.194 0.73 4.774 0.562C4.326 0.366 3.836 0.0579998 3.066 0.0579998C2.086 0.0579998 1.274 0.674 0.784 1.346L1.47 2.242C1.82 1.822 2.366 1.36 3.038 1.36C3.71 1.36 4.158 1.668 4.578 1.836C5.026 2.032 5.558 2.34 6.328 2.34C7.266 2.34 8.092 1.752 8.568 1.01L7.812 0.156Z" fill="white"/>
+                                    </svg></a>
+                            {% else %}
+                                {{ item.text }}<svg width="9" height="3" viewbox="0 0 9 3" fill="#17364b" xmlns="http://www.w3.org/2000/svg" class="ml-4">
+                                <path d="M7.812 0.156C7.532 0.492 6.986 1.038 6.3 1.038C5.642 1.038 5.194 0.73 4.774 0.562C4.326 0.366 3.836 0.0579998 3.066 0.0579998C2.086 0.0579998 1.274 0.674 0.784 1.346L1.47 2.242C1.82 1.822 2.366 1.36 3.038 1.36C3.71 1.36 4.158 1.668 4.578 1.836C5.026 2.032 5.558 2.34 6.328 2.34C7.266 2.34 8.092 1.752 8.568 1.01L7.812 0.156Z" fill="white"/>
+                            </svg>
+                            {% endif %}
+                        </li>
+                {% endif %}
+            {% endfor %}
+        </ol>
+    </nav>
+{% endif %}

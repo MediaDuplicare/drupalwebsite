@@ -1,0 +1,33 @@
+historypage:
+  breadcrumb:
+    current: Historiek
+    crumbs:
+      - title: Home
+        link: "#"
+      - title: Over ons
+        link: "#"
+  hero:
+    title: Historiek
+    description: Metus ultrices varius faucibus nec facilisi massa eget donec phasellus. Urna egestas porta pellentesque dui, enim risus magnis fermentum. Mauris accumsan, proin ut diam. Mi mauris eget molestie sit vulputate cras. Orci varius et adipiscing ultricies malesuada morbi.
+  timeline:
+    - title: Oprichting Hogere Zeevaartschool
+      description: Heroprichting van de Hogere Zeevaartschool onder Belgisch bewind. Metus ultrices varius faucibus nec facilisi massa eget donec phasellus. Urna egestas porta pellentesque dui, enim risus magnis fermentum. Mauris accumsan, proin ut diam.
+      date: 1834
+      media:
+        image:
+          src: /themes/custom/ama/src/images/placeholders/unsplash_asiJSIcFlBE (1).png
+          alt: Timeline image
+        caption: Vroeger bood de HZS ook een opleiding tot scheepskok aan.
+    - title: Start van de "Naamgevingen"
+      description: "Start van de 'Naamgevingen': bij het begin van elk academiejaar wordt, tijdens een plechtigheid, aan de promotie Nautische Wetenschappen de naam gegeven van een verdienstelijke personaliteit uit de maritieme wereld. Vanaf 1997 gebeurt dit ook voor de promotie Scheepswerktuigkunde."
+      date: 1907
+    - title: Hervatting van de leergangen 
+      description: 	Hervatting van de leergangen na een schorsing van 1914 tot 1918. Metus ultrices varius faucibus nec facilisi massa eget donec phasellus. Urna egestas porta pellentesque dui, enim risus magnis fermentum. Mauris accumsan, proin ut diam.
+      date: 1919
+      media:
+        image:
+          src: /themes/custom/ama/src/images/placeholders/unsplash_asiJSIcFlBE (1).png
+          alt: Timeline image
+        caption: Vroeger bood de HZS ook een opleiding tot scheepskok aan.
+    - title: Ingebruikneming van het nieuw schoolgebouw.
+      date: 1932

@@ -1,0 +1,35 @@
+<section class="news container-fluid wrap pb-20">
+    <div class="row intro">
+        <div class="col-xs-12 col-sm-6 col-md-5">
+            {% if section.subtitle %}
+                <h2 class="h2-text"> {{ section.title }}</h2>
+                <svg width="59" height="18" viewBox="0 0 59 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+                     class="tilde flex-shrink-0 ml-6">
+                    <path d="M53.032 1.016C50.952 3.512 46.896 7.568 41.8 7.568C36.912 7.568 33.584 5.28 30.464 4.032C27.136 2.576 23.496 0.287998 17.776 0.287998C10.496 0.287998 4.464 4.864 0.824 9.856L5.92 16.512C8.52 13.392 12.576 9.96 17.568 9.96C22.56 9.96 25.888 12.248 29.008 13.496C32.336 14.952 36.288 17.24 42.008 17.24C48.976 17.24 55.112 12.872 58.648 7.36L53.032 1.016Z"
+                          fill="#E30613"/>
+                </svg>
+            {% endif %}
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-md-offset-1">
+            <div class="intro--text">
+                {% if section.subtitle %}
+                    <h5 class="h5 text-tertiary mb-2">{{ section.subtitle }}</h5>
+                {% endif %}
+                {% if section.description %}
+                    <p class="paragraph text-tertiary-700">{{ section.description | raw }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    {% include '@duplicare/components/grid.html.twig' with { 'articles' : section.newsItems } %}
+
+    {% if section.cta %}
+        <div class="text-center">
+            <a href="{{ section.cta.url }}" {{ section.ntab }} class="btn btn--primary">
+                {{ section.cta.text }}
+            </a>
+        </div>
+    {% endif %}
+</section>
+
