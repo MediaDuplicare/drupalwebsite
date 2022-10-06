@@ -5,14 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6634f5a-93e4-4e38-99ad-473c20f299bf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.docker/config/vhosts/duplicare.conf" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/config/vhosts/duplicare.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3c016831-e21b-4842-bf50-5cd8ac472f6e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3c016831-e21b-4842-bf50-5cd8ac472f6e.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/duplicare.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/duplicare.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/web/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -21,15 +24,26 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/.docker/apache/Dockerfile" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.docker/config/vhosts/duplicare.conf" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dockerfile" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/docker-compose.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/theme/gulpfile.js/config.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/theme/gulpfile.js/index.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/theme/gulpfile.js/lib/configLoader.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/theme/gulpfile.js/lib/customNotifier.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/theme/gulpfile.js/lib/getArg.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/theme/gulpfile.js/lib/getEnabledTasks.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/theme/gulpfile.js/lib/handleErrors.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/theme/gulpfile.js/lib/pathToUrl.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/theme/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/web/composer.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/web/composer.lock" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/web/web/INSTALL.txt" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/web/web/modules/custom/drupal_devel/drupal_devel.module" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/web/web/modules/custom/duplicare_content_mapper/duplicare_content_mapper.info.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/web/web/modules/custom/duplicare_content_mapper/duplicare_content_mapper.module" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/web/web/modules/custom/duplicare_content_mapper/src/Services/DuplicareMapper.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/web/web/sites/default/settings.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -147,6 +161,11 @@
       <path value="$PROJECT_DIR$/web/vendor/pear/archive_tar" />
       <path value="$PROJECT_DIR$/web/vendor/clue/stream-filter" />
       <path value="$PROJECT_DIR$/web/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/web/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/web/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/web/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/web/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/web/vendor/doctrine/event-manager" />
     </include_path>
   </component>
   <component name="ProjectId" id="29c23DJqFWKoimZtxS2qHb7dOtH" />
@@ -175,11 +194,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/web/modules" />
       <recent name="$PROJECT_DIR$/web/web/sites/default" />
       <recent name="$PROJECT_DIR$/theme/js" />
       <recent name="$PROJECT_DIR$/theme/gulpfile.js/recipes/react/src/js" />
       <recent name="$PROJECT_DIR$/theme/gulpfile.js/tasks" />
-      <recent name="$PROJECT_DIR$/theme/gulpfile.js/recipes/react/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/theme/gulpfile.js/recipes/react" />
@@ -195,6 +214,9 @@
       <updated>1653397852626</updated>
       <workItem from="1653397853844" duration="3806000" />
       <workItem from="1653978234555" duration="1644000" />
+      <workItem from="1658817153999" duration="6479000" />
+      <workItem from="1664264444235" duration="767000" />
+      <workItem from="1665055521276" duration="1169000" />
     </task>
     <servers />
   </component>

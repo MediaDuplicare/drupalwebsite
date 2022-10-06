@@ -113,6 +113,11 @@
       <excludeFolder url="file://$MODULE_DIR$/web/vendor/pear/archive_tar" />
       <excludeFolder url="file://$MODULE_DIR$/web/vendor/clue/stream-filter" />
       <excludeFolder url="file://$MODULE_DIR$/web/vendor/psy/psysh" />
+      <excludeFolder url="file://$MODULE_DIR$/web/vendor/doctrine/inflector" />
+      <excludeFolder url="file://$MODULE_DIR$/web/vendor/doctrine/common" />
+      <excludeFolder url="file://$MODULE_DIR$/web/vendor/doctrine/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/web/vendor/doctrine/persistence" />
+      <excludeFolder url="file://$MODULE_DIR$/web/vendor/doctrine/event-manager" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -1,0 +1,10 @@
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      src/css/app.css: {minified: true}
+  js:
+    src/js/app.js: {}
+  dependencies:
+    - core/jquery
+
